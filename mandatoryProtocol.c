@@ -47,8 +47,12 @@ void writeDisplay() {
 	gfx_print_text(text);
 }
 
-int obstacleInSight(int sensorID, int thresholdDistanceValue);
-
+/*
+ * This will check whether a sensor is running over threshold.
+ * @param sensorID id of sensor
+ * @param thresholdDistanceValue threshold value for distance sensor
+ * @return 0 if threshold is not reached. Otherwise 1.
+ */
 int obstacleInSight(int sensorID, int thresholdDistanceValue) {
 	int current_distance = copro_distance[sensorID] / 256;
 	if (current_distance >= thresholdDistanceValue) {
@@ -57,11 +61,17 @@ int obstacleInSight(int sensorID, int thresholdDistanceValue) {
 	return 0;
 }
 
-int decideLeftOrRight(int leftSensorValue, int rightSensorValue) {
-	if (leftSensorValue < rightSensorValue) {
-		return 1;
-	} else {
+/*
+ * This will compare two value for the smallest. The smallest value will be indicated by 1 or 0.
+ * @param value1
+ * @param value2
+ * @return 0 if value1 is smaller then value2. Otherwise 1.
+ */
+int compareForSmallestValue(int value1, int value2) {
+	if (value1 < value2) {
 		return 0;
+	} else {
+		return 1;
 	}
 }
 
@@ -80,6 +90,8 @@ int main() {
 	while (1 == 1) {
 		copro_update();
 		copro_setSpeed(10, 10);
+		//preload all Values (vielleicht eine Sensorabfrage pro Durchlauf,
+		//um die Durchlauf Geschwindigkeit zu erhöhen?)
 		int front = obstacleInSight(2, CRITICAL_DISTANCE);
 		int lBlade = obstacleInSight(1, NEAR_DISTANCE);
 		int rBlade = obstacleInSight(3, NEAR_DISTANCE);
