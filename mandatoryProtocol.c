@@ -41,12 +41,64 @@ enum state {
 
 char text[40] = "";
 void writeDisplay() {
+	
 	gfx_fill(0);
 	gfx_move(0, 0);
 	//sprintf(text, "Speed l: %3i  r: %3i", copro_speed_l, copro_speed_r);
 	gfx_print_text(text);
 }
-
+void driveBackwards(){
+    while(1==1){
+    	copro_setSpeed(-10, -10);
+        copro_update();
+        if(copro_distance[0]/256 < 20 && copro_distance[4]/256 < 20){
+            delay(1000);
+            turnRight();
+            break;
+        }else if(copro_distance[0]/256 < 25){
+            delay(1000);
+            turnRight();
+            break;;
+        }else{
+            delay(1000);
+            turnLeft();
+            break;
+        }
+        delay(1000);
+    }
+}
+void hardRight(){
+	copro_stop();
+	copro_setTargetRel(27, -27, 10);
+	delay(2000);
+}
+void hardLeft(){
+	copro_stop();
+	copro_setTargetRel(-27, 27, 10);
+	delay(2000);
+}
+void turnLeft(){
+    copro_setSpeed(-10, 10);
+    while(1 == 1){
+    	copro_update();
+    	if(copro_distance[2]/256 < 30){
+    		copro_setSpeed(10, 10);
+    		return;
+    	}
+    	delay(500);
+    }
+}
+void turnRight(){
+    copro_setSpeed(10, -10);
+    while(1 == 1){
+    	copro_update();
+    	if(copro_distance[2]/256 < 30){
+    		copro_setSpeed(10, 10);
+    		return;
+    	}
+    	delay(500);
+    }
+}
 /*
  * This will check whether a sensor is running over threshold.
  * @param sensorID id of sensor
@@ -115,34 +167,33 @@ int main() {
 			}
 			break;
 		case TURNING_LEFT:
-			//nach links abdrehen - abhängig von Distanzsensoren
+			turnLeft();
 			break;
 		case TURNING_RIGHT:
-			//Nach rechts abdrehen - abhängig von Distanzsensoren
+			turnRight();
 			break;
 		case RUNNING_BACKWARDS:
-			//Rückwärts fahren und Wände beobachten
+			driveBackwards();
 			break;
 		case WAITING:
 			//Warten bis Knöpfchen gedrückt dann RUNNING_FORWARD
 			break;
 		case HARD_LEFT:
-			//Bremsen und 90° nach links
+			hardLeft();
 			break;
 		case HARD_RIGHT:
-			//Bremsen und 90° nach rechts
+			hardRight();
 			break;
 		}
 
-		copro_stop();
-		// 2s warten
-		delay(500);
+		//copro_stop();
+		delay(800);
 
-		copro_stopImmediate();
-		copro_resetOdometry(0, 0);
-		copro_setTargetAbs(280, 280, 28);
-		copro_setTargetRel(-420, -420, 28);
-		copro_resetOdometry(0, 0);
+		//copro_stopImmediate();
+		//copro_resetOdometry(0, 0);
+		//copro_setTargetAbs(280, 280, 28);
+		//copro_setTargetRel(-420, -420, 28);
+		//copro_resetOdometry(0, 0);
 	}
 }
 
