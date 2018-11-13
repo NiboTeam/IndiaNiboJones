@@ -23,6 +23,9 @@
 #include <avr/interrupt.h>
 // Ein- und Ausgabefunktionen
 #include <stdio.h>
+#include "n2switchS3.h"
+#include "protocols.h"
+#include "gfxOutput.h"
 
 #define OBSTACLE_IN_RANGE 20
 #define FAR_DISTANCE 50
@@ -37,67 +40,67 @@ enum state {
 	RUNNING_BACKWARDS,
 	HARD_LEFT,
 	HARD_RIGHT
-} mashineState;
+} machineState;
 
 char text[40] = "";
 void writeDisplay() {
-	
+
 	gfx_fill(0);
 	gfx_move(0, 0);
 	//sprintf(text, "Speed l: %3i  r: %3i", copro_speed_l, copro_speed_r);
 	gfx_print_text(text);
 }
-void driveBackwards(){
-    while(1==1){
-    	copro_setSpeed(-10, -10);
-        copro_update();
-        if(copro_distance[0]/256 < 20 && copro_distance[4]/256 < 20){
-            delay(1000);
-            turnRight();
-            break;
-        }else if(copro_distance[0]/256 < 25){
-            delay(1000);
-            turnRight();
-            break;;
-        }else{
-            delay(1000);
-            turnLeft();
-            break;
-        }
-        delay(1000);
-    }
+void driveBackwards() {
+	while (1 == 1) {
+		copro_setSpeed(-10, -10);
+		copro_update();
+		if (copro_distance[0] / 256 < 20 && copro_distance[4] / 256 < 20) {
+			delay(1000);
+			turnRight();
+			break;
+		} else if (copro_distance[0] / 256 < 25) {
+			delay(1000);
+			turnRight();
+			break;;
+		} else {
+			delay(1000);
+			turnLeft();
+			break;
+		}
+		delay(1000);
+	}
 }
-void hardRight(){
+void hardRight() {
 	copro_stop();
 	copro_setTargetRel(27, -27, 10);
 	delay(2000);
 }
-void hardLeft(){
+void hardLeft() {
 	copro_stop();
 	copro_setTargetRel(-27, 27, 10);
 	delay(2000);
 }
-void turnLeft(){
-    copro_setSpeed(-10, 10);
-    while(1 == 1){
-    	copro_update();
-    	if(copro_distance[2]/256 < 30){
-    		copro_setSpeed(10, 10);
-    		return;
-    	}
-    	delay(500);
-    }
+void turnLeft() {
+	copro_setSpeed(-10, 10);
+	while (1 == 1) {
+		copro_update();
+		if (copro_distance[2] / 256 < 30) {
+			copro_setSpeed(10, 10);
+			return;
+		}
+		delay(500);
+	}
 }
-void turnRight(){
-    copro_setSpeed(10, -10);
-    while(1 == 1){
-    	copro_update();
-    	if(copro_distance[2]/256 < 30){
-    		copro_setSpeed(10, 10);
-    		return;
-    	}
-    	delay(500);
-    }
+void turnRight() {
+	copro_setSpeed(10, -10);
+	while (1 == 1) {
+		copro_update();
+		if (copro_distance[2] / 256 < 30) {
+			copro_setSpeed(10, 10);
+			return;
+		}
+		delay(500);
+	}
 }
 /*
  * This will check whether a sensor is running over threshold.
@@ -128,7 +131,11 @@ int compareForSmallestValue(int value1, int value2) {
 }
 
 int main() {
-	mashineState = WAITING;
+	machineState = WAITING;
+	int last_machineState = RUNNING_BACKWARDS;
+	int loopCounter = 0;
+	printDebug("Protocoll started!");
+
 	sei();
 	bot_init();
 	spi_init();
@@ -137,11 +144,18 @@ int main() {
 	gfx_init();
 
 	copro_ir_startMeasure();
-	int current_distance = 0;
 	// Endlosschleife
 	while (1 == 1) {
 		copro_update();
-		copro_setSpeed(10, 10);
+
+		if (s3_was_pressed()) {
+			if (machineState != WAITING) {
+				machineState = WAITING;
+			} else if (machineState == WAITING) {
+				machineState = RUNNING_FORWARD;
+			}
+		}
+
 		//preload all Values (vielleicht eine Sensorabfrage pro Durchlauf,
 		//um die Durchlauf Geschwindigkeit zu erhöhen?)
 		int front = obstacleInSight(2, CRITICAL_DISTANCE);
@@ -149,21 +163,30 @@ int main() {
 		int rBlade = obstacleInSight(3, NEAR_DISTANCE);
 		int lSide = obstacleInSight(0, NEAR_DISTANCE);
 		int rSide = obstacleInSight(4, NEAR_DISTANCE);
-		int current_distance;
-		switch (mashineState) {
+		switch (machineState) {
 		case RUNNING_FORWARD:
 			if (front) { //Hindernis gefunden
 				if (front && lBlade && rBlade) { //Ist das Hindernis zu groß?
 					if (rSide && lSide) { // Ist es vielleicht sogar eine Sackgasse?
-						mashineState = RUNNING_BACKWARDS;
+						machineState = RUNNING_BACKWARDS;
+					} else {
+						if (compareForSmallestValue(copro_distance[1] / 256,
+								copro_distance[3] / 256) == 1) {
+							machineState = TURNING_LEFT;
+						} else {
+							machineState = TURNING_RIGHT;
+						}
 					}
 				}
-				if(decideLeftOrRight(copro_distance[1] / 256,
-						copro_distance[3] / 256)==1){
-					mashineState == TURNING_LEFT;
-				}else{
-					mashineState == TURNING_RIGHT;
+			} else if (rBlade || lBlade) {
+				if (compareForSmallestValue(copro_distance[1] / 256,
+						copro_distance[3] / 256) == 1) {
+					machineState = TURNING_LEFT;
+				} else {
+					machineState = TURNING_RIGHT;
 				}
+			} else {
+				copro_setSpeed(10, 10);
 			}
 			break;
 		case TURNING_LEFT:
@@ -176,7 +199,7 @@ int main() {
 			driveBackwards();
 			break;
 		case WAITING:
-			//Warten bis Knöpfchen gedrückt dann RUNNING_FORWARD
+			copro_stop();
 			break;
 		case HARD_LEFT:
 			hardLeft();
@@ -186,8 +209,16 @@ int main() {
 			break;
 		}
 
+		if (last_machineState != machineState) {
+			printMachineState((int) machineState);
+		}
+
+		last_machineState = machineState;
+		loopCounter++;
+
+		//gfx_fill(0);
 		//copro_stop();
-		delay(800);
+		//delay(800);
 
 		//copro_stopImmediate();
 		//copro_resetOdometry(0, 0);
