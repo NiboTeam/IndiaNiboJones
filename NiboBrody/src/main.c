@@ -14,7 +14,7 @@ typedef struct segment{					// A single segment out of the complete outline
 }segment;
 
 segment *head = NULL;					// points to the starting segment
-char **output;							// will later on be filled with the outline
+char *output;							// will later on be filled with the outline
 
 int columns = 0;						// Defines the size of the array
 int rows = 0;
@@ -25,15 +25,11 @@ int startRow = 0;
 void createSegment(int distance, DIRECTIONS direction);	// Appends a new segment to the outline
 void parseArraySize();					// Parses the size of 'output'
 void fillArray();
-void printUpwards(int startColumn, int startRow, int length);
-void printDownwards(int startColumn, int startRow, int length);
-void printLeftwards(int startColumn, int startRow, int length);
-void printRightwards(int startColumn, int startRow, int length);
 void printOutline();
 
 int main(){
 	setvbuf(stdout, NULL, _IONBF, 0);
-	// /*
+	/*
 	createSegment(3, 1);
 	createSegment(1, 2);
 	createSegment(2, 3);
@@ -46,8 +42,8 @@ int main(){
 	createSegment(5, 0);
 	createSegment(2, 1);
 	createSegment(1, 2);
-	// */
-	/*
+	*/
+	// /*
 	createSegment(1,1);
 	createSegment(1,2);
 	createSegment(1,1);
@@ -64,7 +60,7 @@ int main(){
 	createSegment(1,0);
 	createSegment(1,3);
 	createSegment(2,0);
-	*/
+	// */
 	parseArraySize();
 	fillArray();
 	printOutline();
@@ -133,41 +129,48 @@ void parseArraySize(){
 	}
 	columns = pointerColumnMax + (-1*pointerColumnMin) + 1;	// Distanz zwischen den Extremwerten
 	rows = pointerRowMax + (-1*pointerRowMin) + 1;			// Distanz zwischen den Extremwerten
-	startColumn = pointerColumnMin*-1;					// abhängig davon, wie oft nach links gegangen wurde
-	startRow = pointerRowMax;							// abhängig davon, wie oft nach oben gegangen wurde
+	startColumn = pointerColumnMin*-1;						// abhängig davon, wie oft nach links gegangen wurde
+	startRow = pointerRowMax;								// abhängig davon, wie oft nach oben gegangen wurde
 }
 void fillArray(){
-	// Set size of array depending of segments
-	output = malloc(sizeof(char) * columns);
-	for (int i = 0; i < columns; i++){
-		output[i] = malloc(sizeof(char) * rows);
+	output = malloc(sizeof(char) * (columns*rows));
+	if (output == NULL){
+	    printf("ERROR: Could not allocate enough space for the output array.");
+	    return;
 	}
 	// Filling the array with white spaces
 	for(int i = 0; i < rows; i++){
 		for(int j = 0; j < columns; j++){
-			output[j+(i*columns)] = " ";
+			output[j+(i*columns)] = ' ';
 		}
 	}
 	segment *currentSegment = head;
 	int pointerColumn = startColumn;
 	int pointerRow = startRow;
 	while(currentSegment != NULL){
-		//printf("X: %d Y: %d", pointerColumn, pointerRow);
 		switch(currentSegment->direction){
 		case 0:
-			printUpwards(pointerColumn, pointerRow, currentSegment->distance);
+			for(int i = pointerRow; i > (pointerRow-currentSegment->distance); i--){
+				output[pointerColumn+(i*columns)] = '#';
+			}
 			pointerRow = pointerRow - currentSegment->distance;
 			break;
 		case 1:
-			printRightwards(pointerColumn, pointerRow, currentSegment->distance);
+			for(int i = 0; i < currentSegment->distance; i++){
+				output[pointerColumn+i+(pointerRow*columns)] = '#';
+			}
 			pointerColumn = pointerColumn + currentSegment->distance;
 			break;
 		case 2:
-			printDownwards(pointerColumn, pointerRow, currentSegment->distance);
+			for(int i = pointerRow; i < (pointerRow+currentSegment->distance); i++){
+				output[pointerColumn+(i*columns)] = '#';
+			}
 			pointerRow = pointerRow + currentSegment->distance;
 			break;
 		case 3:
-			printLeftwards(pointerColumn, pointerRow, currentSegment->distance);
+			for(int i = 0; i < currentSegment->distance; i++){
+				output[pointerColumn-i+(pointerRow*columns)] = '#';
+			}
 			pointerColumn = pointerColumn - currentSegment->distance;
 			break;
 		}
@@ -175,31 +178,10 @@ void fillArray(){
 	}
 }
 
-void printUpwards(int startColumn, int startRow, int length){
-	for(int i = startRow; i > (startRow-length); i--){
-		output[startColumn+(i*columns)] = "#";
-	}
-}
-void printDownwards(int startColumn, int startRow, int length){
-	for(int i = startRow; i < (startRow+length); i++){
-		output[startColumn+(i*columns)] = "#";
-	}
-}
-void printLeftwards(int startColumn, int startRow, int length){
-	for(int i = 0; i < length; i++){
-		output[startColumn-i+(startRow*columns)] = "#";
-	}
-}
-void printRightwards(int startColumn, int startRow, int length){
-	for(int i = 0; i < length; i++){
-		output[startColumn+i+(startRow*columns)] = "#";
-	}
-}
-
 void printOutline(){
 	for(int i = 0; i < rows; i++){
 		for(int j = 0; j < columns; j++){
-			printf("%c", *output[j+(i*columns)]);
+			printf("%c", output[j+(i*columns)]);
 		}
 		printf("\n");
 	}
