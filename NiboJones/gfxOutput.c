@@ -1,31 +1,70 @@
 /*
  ============================================================================
- Name        : protocols.h
+ Name        : gfxOutput.c
  Author      :
  Version     :
  Description : Holds all a bunch of methods to display state alerts on nibo display.
  ============================================================================
  */
-
+#include <stdio.h>
 #include <nibo/gfx.h>
 // Wartefunktionen
 #include <nibo/delay.h>
+
+char oldDebug[];
 
 void initDisplay(){
 	display_init();
 	gfx_init();
 }
 
+void cleanDebug(int length){
+	gfx_move(0, 55);
+	char whiper[length];
+
+	for(int i = 0; i < length; i++){
+		whiper[i] = ' ';
+	}
+
+	gfx_print_text(whiper);
+}
+
 void printDebug(char array[40]){
-	gfx_print_text("                                        ");
-	gfx_move(50, 0);
+	gfx_move(0, 55);
 	gfx_print_text(array);
+}
+
+void printInfo(char array[40], int height){
+	gfx_move(0, height);
+	gfx_print_text(array);
+}
+
+void printMovingDirection(int direction){
+	gfx_move(120, 55);
+	gfx_print_text("  ");
+	gfx_move(120, 55);
+
+	char output[2];
+	switch (direction) {
+	case 0:
+		gfx_print_text("L");
+		break;
+	case 3:
+		gfx_print_text("U");
+		break;
+	case 6:
+		gfx_print_text("R");
+		break;
+	}
 }
 
 void printMachineState(int state) {
 	char output[20];
 	gfx_move(0, 5);
 	gfx_print_text("Machine state:");
+	gfx_move(0, 15);
+
+	gfx_print_text("                        ");
 	gfx_move(0, 15);
 
 	switch (state) {
@@ -57,5 +96,8 @@ void printMachineState(int state) {
 	if (state == 3) {
 		gfx_move(0, 30);
 		gfx_print_text("press s3 for start");
+	}else{
+		gfx_move(0, 30);
+		gfx_print_text("                        ");
 	}
 }
