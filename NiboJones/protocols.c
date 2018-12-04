@@ -21,6 +21,14 @@
 #define SIDE_THRESHOLD_OUTSIDE_MAX 200
 #define SIDE_THRESHOLD_OUTSIDE_MIN 190
 
+enum correctState {
+	OUTSIDE = 0,
+	INSIDE = 1,
+	NON
+} correctState;
+
+int lastCorrectState = -1;
+
 int counter = 0;
 
 void init_protocol(){
@@ -49,13 +57,21 @@ void init_protocol(){
 }
 
 void correctTrackToLeft(){
-	copro_setSpeed(9, 10);
+	copro_setSpeed(10, 12);
 	delay(200);
 }
 
 void correctTrackToRight(){
-	copro_setSpeed(10, 9);
+	copro_setSpeed(12, 10);
 	delay(200);
+}
+
+void disableCorrectionOfTrack(int last_correction, int runDirection){
+	if(last_correction == OUTSIDE){
+		correctTrackToInside(runDirection);
+	}else if(last_correction == INSIDE){
+		correctTrackToOutside(runDirection);
+	}
 }
 
 void correctTrackToInside(int direction){
@@ -85,12 +101,29 @@ void rightTurn_protocol() {
 	delay(2000);
 }
 
-void stayOnTheRightTrack(int sensor){
+void stayOnTheRightTrack(int runDirection){
 	copro_update();
-	if(copro_distance[sensor] / 256 > SIDE_THRESHOLD_OUTSIDE_MAX){
-		correctTrackToInside(sensor);
-	}else if(copro_distance[sensor] / 256 < SIDE_THRESHOLD_OUTSIDE_MIN) {
-		correctTrackToOutside(sensor);
+	int lastCorrection = correctState;
+	if(copro_distance[runDirection] / 256 > SIDE_THRESHOLD_OUTSIDE_MAX){
+		correctState = INSIDE;
+		correctTrackToInside(runDirection);
+	}else if(copro_distance[runDirection] / 256 < SIDE_THRESHOLD_OUTSIDE_MIN) {
+		correctState = OUTSIDE;
+		correctTrackToOutside(runDirection);
+	}else{
+		correctState = NON;
+		disableCorrectionOfTrack(lastCorrection, runDirection);
+	}
+
+	if(lastCorrectState != correctState){
+		cleanDebug(15);
+		if(correctState == INSIDE){
+			printDebug("Correct Outside!");
+		} else if(correctState == OUTSIDE){
+			printDebug("Correct Inside!");
+		} else{
+			printDebug("No correction!");
+		}
 	}
 }
 
@@ -100,7 +133,7 @@ void runForward_protocol(){
 	int front = copro_distance[2] / 256;
 	int side_outside = copro_distance[run_direction] / 256;
 
-	if(counter % 800 == 0 || (counter % 800) - 1 == 0 || (counter % 800) + 1 == 0){
+	/*if(counter % 800 == 0 || (counter % 800) - 1 == 0 || (counter % 800) + 1 == 0){
 		printInfo("                        ", 40);
 		printInfo("                        ", 47);
 		char output[20];
@@ -108,16 +141,17 @@ void runForward_protocol(){
 		printInfo(output, 40);
 		sprintf(output, "Side: %3i ", side_outside);
 		printInfo(output, 47);
-	}
+	}*/
 
-	if (front >= FRONT_THRESHOLD) { //Wand gefunden -> Innenkurve
-
+	if (front >= FRONT_THRESHOLD) { //vorne Wand gefunden -> Innenkurve
 		if(run_direction == LEFT_RUN){
 			machine_state = TURNING_LEFT;
 		}else{
 			machine_state = TURNING_RIGHT;
 		}
 	} else if(run_direction != UNKNOWN && side_outside < SIDE_OUTSIDE_TURN_THRESHOLD){ // Seitenwand weg -> Außenkurve
+		//copro_setTargetRel(15, 15, 10);
+		delay(2000);
 		if(run_direction == LEFT_RUN){
 			machine_state = TURNING_RIGHT;
 		}else{
