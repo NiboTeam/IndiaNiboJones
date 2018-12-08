@@ -23,8 +23,6 @@ enum state {
 	END
 } machine_state;
 
-extern enum state machine_state;
-
 void init_protocol();
 void runForward_protocol();
 void leftTurn_protocol();

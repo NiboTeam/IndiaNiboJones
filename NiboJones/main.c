@@ -69,6 +69,7 @@ int checkForBlackUnderground(){
 
 int main() {
 	machine_state = WAITING;
+	measure_State = FINISHED;
 	run_direction = UNKNOWN;
 	int last_machineState = END;
 	int last_measureState = FINISHED;
@@ -97,12 +98,16 @@ int main() {
 			leftTurn_protocol();
 			sendData();
 			machine_state = RUNNING_FORWARD;
+			copro_setSpeed(10, 10);
+			delay(2000);
 			break;
 		case TURNING_RIGHT:
 			processGatheredData();
 			rightTurn_protocol();
 			sendData();
 			machine_state = RUNNING_FORWARD;
+			copro_setSpeed(10, 10);
+			delay(2000);
 			break;
 		case END:
 			break;
