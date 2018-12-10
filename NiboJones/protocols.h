@@ -16,16 +16,25 @@ enum direction {
 } run_direction;
 
 enum state {
+	INITIALIZATION,
+	TRACK_CORRECTION,
+	TURNING_INSIDE,
+	TURNING_OUTSIDE,
 	RUNNING_FORWARD,
-	TURNING_LEFT,
-	TURNING_RIGHT,
+	SENDING_DATA,
 	WAITING,
-	END
-} machine_state;
+	FINISHING_RUN
+} machine_State;
+
+enum measurement {
+	FINISHED = 0,
+	STARTED = 1
+} measure_State;
 
 void init_protocol();
 void runForward_protocol();
-void leftTurn_protocol();
-void rightTurn_protocol();
-int obstacleInSight(int sensorID, int thresholdDistanceValue);
+void turnInside_protocol();
+void turnOutside_protocol();
+void trackCorrection_protocol();
+void finishRun_protocol();
 #endif

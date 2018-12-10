@@ -13,6 +13,7 @@
 #include <nibo/copro.h>
 #include <nibo/spi.h>
 #include "gfxOutput.h"
+#include <nibo/floor.h>
 #include "protocols.h"
 #include <nibo/delay.h>
 
@@ -20,6 +21,7 @@
 #define SIDE_OUTSIDE_TURN_THRESHOLD 20
 #define SIDE_THRESHOLD_OUTSIDE_MAX 200
 #define SIDE_THRESHOLD_OUTSIDE_MIN 190
+#define BLACK_UNDERGROUND 10
 
 enum correctState {
 	OUTSIDE = 0,
@@ -59,19 +61,17 @@ void init_protocol(){
 void correctTrackToLeft(){
 	copro_setSpeed(10, 12);
 	delay(200);
+	copro_setSpeed(12, 10);
+	delay(200);
+	copro_setSpeed(10, 10);
 }
 
 void correctTrackToRight(){
 	copro_setSpeed(12, 10);
+	delay(400);
+	copro_setSpeed(10, 12);
 	delay(200);
-}
-
-void disableCorrectionOfTrack(int last_correction, int runDirection){
-	if(last_correction == OUTSIDE){
-		correctTrackToInside(runDirection);
-	}else if(last_correction == INSIDE){
-		correctTrackToOutside(runDirection);
-	}
+	copro_setSpeed(10, 10);
 }
 
 void correctTrackToInside(int direction){
@@ -90,29 +90,53 @@ void correctTrackToOutside(int direction){
 	}
 }
 
-void leftTurn_protocol() {
-	copro_stop();
+void leftTurn() {
 	copro_setTargetRel(-27, 27, 10);
 	delay(2000);
 }
-void rightTurn_protocol() {
-	copro_stop();
+void rightTurn() {
 	copro_setTargetRel(27, -27, 10);
 	delay(2000);
 }
 
-void stayOnTheRightTrack(int runDirection){
+void turnInside_protocol(){
+	if(run_direction == LEFT_RUN){
+		leftTurn();
+	}else{
+		rightTurn();
+	}
+}
+
+void turnOutside_protocol(){
+	if(run_direction == LEFT_RUN){
+		rightTurn();
+	}else{
+		leftTurn();
+	}
+}
+
+/**
+ * use this function if you like to know, whether the color of the underground hits the defined threshold.
+ * @return 1 if underground color is bigger than defined border.
+ */
+int checkForBlackUnderground(){
+	int blackUndergroundDetected = 0;
+	if(floor_relative[FLOOR_RIGHT] > BLACK_UNDERGROUND || floor_relative[FLOOR_LEFT] > BLACK_UNDERGROUND){
+		blackUndergroundDetected = 1;
+	}
+
+	return blackUndergroundDetected;
+}
+
+void trackCorrection_protocol(){
 	copro_update();
 	int lastCorrection = correctState;
-	if(copro_distance[runDirection] / 256 > SIDE_THRESHOLD_OUTSIDE_MAX){
+	if(copro_distance[run_direction] / 256 > SIDE_THRESHOLD_OUTSIDE_MAX){
 		correctState = INSIDE;
-		correctTrackToInside(runDirection);
-	}else if(copro_distance[runDirection] / 256 < SIDE_THRESHOLD_OUTSIDE_MIN) {
+		correctTrackToInside(run_direction);
+	}else if(copro_distance[run_direction] / 256 < SIDE_THRESHOLD_OUTSIDE_MIN) {
 		correctState = OUTSIDE;
-		correctTrackToOutside(runDirection);
-	}else{
-		correctState = NON;
-		disableCorrectionOfTrack(lastCorrection, runDirection);
+		correctTrackToOutside(run_direction);
 	}
 
 	if(lastCorrectState != correctState){
@@ -125,6 +149,34 @@ void stayOnTheRightTrack(int runDirection){
 			printDebug("No correction!");
 		}
 	}
+	machine_State = RUNNING_FORWARD;
+}
+
+void floorCheck(){
+	floor_update();
+	switch (measure_State) {
+	case FINISHED:
+		cleanDebug("        ");
+		printDebug("Finished!");
+		if(checkForBlackUnderground()){
+			measure_State = STARTED;
+		}
+		break;
+	case STARTED:
+		copro_resetOdometry(0, 0);
+		cleanDebug("         ");
+		printDebug("Started!");
+		if(checkForBlackUnderground()){
+			measure_State = FINISHED;
+			machine_State = SENDING_DATA;
+		}
+		break;
+	}
+}
+
+void finishRun_protocol(){
+	//hier Grundrissanzeige und Empfangskommunikation einfügen.
+	return;
 }
 
 void runForward_protocol(){
@@ -132,6 +184,10 @@ void runForward_protocol(){
 	counter++;
 	int front = copro_distance[2] / 256;
 	int side_outside = copro_distance[run_direction] / 256;
+
+	if (s3_was_pressed()) {
+		machine_State = WAITING;
+	}
 
 	/*if(counter % 800 == 0 || (counter % 800) - 1 == 0 || (counter % 800) + 1 == 0){
 		printInfo("                        ", 40);
@@ -143,22 +199,17 @@ void runForward_protocol(){
 		printInfo(output, 47);
 	}*/
 
+	floorCheck();
+
 	if (front >= FRONT_THRESHOLD) { //vorne Wand gefunden -> Innenkurve
-		if(run_direction == LEFT_RUN){
-			machine_state = TURNING_LEFT;
-		}else{
-			machine_state = TURNING_RIGHT;
-		}
+		copro_stop();
+		machine_State = TURNING_INSIDE;
 	} else if(run_direction != UNKNOWN && side_outside < SIDE_OUTSIDE_TURN_THRESHOLD){ // Seitenwand weg -> Außenkurve
-		//copro_setTargetRel(15, 15, 10);
+		machine_State = TURNING_OUTSIDE;
 		delay(2000);
-		if(run_direction == LEFT_RUN){
-			machine_state = TURNING_RIGHT;
-		}else{
-			machine_state = TURNING_LEFT;
-		}
+		copro_stop();
 	} else { //freie Bahn
 		copro_setSpeed(10, 10);
-		stayOnTheRightTrack(run_direction);
+		machine_State = TRACK_CORRECTION;
 	}
 }

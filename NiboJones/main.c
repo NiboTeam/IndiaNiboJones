@@ -22,24 +22,7 @@
 #include "protocols.h"
 #include "gfxOutput.h"
 
-#define BLACK_UNDERGROUND 10
-
 int measuredData = 0;
-
-enum measurement {
-	FINISHED = 0, STARTED = 1
-} measure_State;
-
-void button_action() {
-	if (s3_was_pressed()) {
-		if (machine_state != WAITING) {
-			machine_state = WAITING;
-		} else if (machine_state == WAITING) {
-			machine_state = RUNNING_FORWARD;
-			init_protocol();
-		}
-	}
-}
 
 void processGatheredData(){
 	if(measure_State == STARTED){
@@ -47,32 +30,21 @@ void processGatheredData(){
 	}
 }
 
-void sendData(){
+int sendData(){
+	int succesfull = 0;
 	if(measure_State == STARTED){
 		//send measuredData!
 		copro_resetOdometry(0, 0);
 	}
-}
 
-/**
- * use this function if you like to know, whether the color of the underground hits the defined threshold.
- * @return 1 if underground color is bigger than defined border.
- */
-int checkForBlackUnderground(){
-	int blackUndergroundDetected = 0;
-	if(floor_relative[FLOOR_RIGHT] > BLACK_UNDERGROUND || floor_relative[FLOOR_LEFT] > BLACK_UNDERGROUND){
-		blackUndergroundDetected = 1;
-	}
-
-	return blackUndergroundDetected;
+	return succesfull;
 }
 
 int main() {
-	machine_state = WAITING;
+	machine_State = WAITING;
 	measure_State = FINISHED;
 	run_direction = UNKNOWN;
-	int last_machineState = END;
-	int last_measureState = FINISHED;
+	int last_machineState = FINISHING_RUN;
 	printDebug("Protocol started!");
 
 	sei();
@@ -87,60 +59,66 @@ int main() {
 
 	// Endlosschleife
 	while (1 == 1) {
-		button_action(); //stopped or not stopped by user manually.
-
-		switch (machine_state) {
+		switch (machine_State) {
+		case INITIALIZATION:
+			init_protocol();
+			machine_State = RUNNING_FORWARD;
+			break;
 		case RUNNING_FORWARD:
 			runForward_protocol();
 			break;
-		case TURNING_LEFT:
+		case TRACK_CORRECTION:
+			trackCorrection_protocol();
+			break;
+		case TURNING_INSIDE:
 			processGatheredData();
-			leftTurn_protocol();
+			turnInside_protocol();
 			sendData();
-			machine_state = RUNNING_FORWARD;
+			if(measure_State == STARTED){
+				machine_State = SENDING_DATA;
+			}else{
+				machine_State = RUNNING_FORWARD;
+			}
+			break;
+		case TURNING_OUTSIDE:
+			processGatheredData();
+			turnOutside_protocol();
+			sendData();
+			machine_State = RUNNING_FORWARD;
 			copro_setSpeed(10, 10);
 			delay(2000);
+			if(measure_State == STARTED){
+							machine_State = SENDING_DATA;
+						}else{
+							machine_State = RUNNING_FORWARD;
+						}
 			break;
-		case TURNING_RIGHT:
-			processGatheredData();
-			rightTurn_protocol();
-			sendData();
-			machine_state = RUNNING_FORWARD;
-			copro_setSpeed(10, 10);
-			delay(2000);
+		case SENDING_DATA:
+			if(sendData() && measure_State == FINISHED){
+				machine_State = FINISHING_RUN;
+			}else if(sendData() && measure_State == STARTED){
+				machine_State = RUNNING_FORWARD;
+			}
+			//sonst im machine_state beleiben
 			break;
-		case END:
+		case FINISHING_RUN:
+			copro_stop();
+			finishRun_protocol(); //Umriss anzeigen
+			machine_State = WAITING;
 			break;
 		case WAITING:
 			copro_stop();
+			if (s3_was_pressed()) {
+				machine_State = RUNNING_FORWARD;
+			}
 			break;
 		}
-		floor_update();
-		if (last_measureState != measure_State) {
-			switch (measure_State) {
-			case FINISHED:
-				cleanDebug("        ");
-				printDebug("Finished!");
-				if(checkForBlackUnderground()){
-					measure_State = STARTED;
-				}
-				break;
-			case STARTED:
-				copro_resetOdometry(0, 0);
-				cleanDebug("         ");
-				printDebug("Started!");
-				if(checkForBlackUnderground()){
-					measure_State = FINISHED;
-				}
-				break;
-			}
+
+		if (last_machineState != machine_State) {
+			printMachineState(machine_State);
 		}
 
-		if (last_machineState != machine_state) {
-			printMachineState(machine_state);
-		}
-
-		last_machineState = machine_state;
+		last_machineState = machine_State;
 
 		//gfx_fill(0);
 		//copro_stop();
