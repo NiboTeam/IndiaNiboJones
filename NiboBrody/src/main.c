@@ -104,17 +104,23 @@ int initializeXBee();
 **/
 int parseMessage(unsigned char message);
 /**
-  * Sends an acknowledgement to the NIBO
+  * Sends an acknowledgement to the NIBO, without waiting for an answer
 **/
 void sendAcknowledgement();
+/**
+  * Sends a single byte to the NIBO and awaits an answer
+  * @param The byte which is gonna by transmitted
+**/
+int sendMessage(unsigned char byte);
 /**
   * Sends the outline to the NIBO at the end of the drive
 **/
 void sendOutline();
 
+
 int main(){
 	setvbuf(stdout, NULL, _IONBF, 0);
-	/* DEMO TEST
+	/*
 	int message = 225;
 	unsigned char c = message & 255;
 	parseMessage(c);
@@ -157,10 +163,10 @@ int main(){
 	message = 161;
 	c = message & 255;
 	parseMessage(c);
-	message = 131;
+	message = 128;
 	c = message & 255;
 	parseMessage(c);
-	message = 224;
+	message = 227;
 	c = message & 255;
 	parseMessage(c);
 
@@ -168,6 +174,8 @@ int main(){
 	parseArraySize();
 	fillArray();
 	printOutline();
+
+	//sendOutline();
 	*/
 	if(initializeXBee() == -1){
 		printf("Initializing failed! Closing program...");
@@ -213,7 +221,6 @@ int main(){
 		}
 	}
 }
-
 void createSegment(int distance, int newDirection){
 	setDirection(newDirection);
 	// The SCALEFACTOR enlarges the outline, for a better presentation, while the +2 represent the corners
@@ -387,34 +394,33 @@ void correctOutline(){
 		}
 		currentPart = currentPart->previousSegment;
 	}
-	// Checks whether the end column is in front of, inside or behind the first segment.
-	int difColumns = 0;
-	if(head->direction == 1){
-		if(endColumn < startColumn){
-			difColumns = startColumn - endColumn;
-		}else if(endColumn > (startColumn + head->distance)){
-			difColumns = endColumn - (startColumn + head->distance);
-		}
-	}else{
-		if(endRow < startRow - head->distance){
-			difColumns = (startColumn - head->distance) - endColumn;
-		}else if(endRow > startColumn){
-			difColumns = startColumn - endColumn;
-		}
-	}
+
+	int difColumns = startColumn - endColumn;
 	currentPart = end;
+
 	while(difColumns != 0){
 		if(difColumns > 0 && currentPart->direction == 1){
 			currentPart->distance = currentPart->distance + difColumns;
 			difColumns = 0;
-		}else if(difColumns < 0 && currentPart->direction == 3){
-			if(currentPart->distance > difRows){
+		}else if (difColumns > 0 && currentPart->direction == 3){
+			if(currentPart->distance > difColumns){
 				currentPart->distance = currentPart->distance - difColumns;
 				difColumns = 0;
 			}else{
-				currentPart->distance = 1 * SCALEFACTOR;
-				difColumns = difColumns - currentPart->distance + 1;
+				currentPart->distance = 1 * SCALEFACTOR + 2;
+				difColumns = difColumns - currentPart->distance;
 			}
+		}else if(difColumns < 0 && currentPart->direction == 1){
+			if(currentPart->distance > (difColumns*-1)){
+				currentPart->distance = currentPart->distance + difColumns;
+				difColumns = 0;
+			}else{
+				currentPart->distance = 1 * SCALEFACTOR + 2;
+				difColumns = difColumns - currentPart->distance;
+			}
+		}else if(difColumns < 0 && currentPart->direction == 3){
+			currentPart->distance = currentPart->distance + difColumns;
+			difColumns = 0;
 		}
 		currentPart = currentPart->previousSegment;
 	}
@@ -497,53 +503,60 @@ int parseMessage(unsigned char message){
 	}
 }
 void sendAcknowledgement(){
-	// The content of the answer has no meaning, its just used for the acknowledgement
-	char answer = '1';
+	// Content of the actual message is meaningless, its just used for the acknowledgement
+	int byte = 128;
+	unsigned char answer = byte & 255;
 	write(serialDevice, &answer , 1);
+}
+int sendMessage(unsigned char byte){
+	int counter = 0;
+	int received = -1;
+	int status = 0;
+	while (1 == 1) {
+		write(serialDevice, &byte , 1);
+		sleep(1);
+		received = read(serialDevice, &messageBuffer, 1);
+		if(messageBuffer == 0 || received == -1){
+			if(counter > 10){
+				status = -1;
+				break;
+			}
+			counter++;
+			continue;
+		}else{
+			int answer = messageBuffer;
+			if( (answer & 128) == 128){
+				status = 1;
+				break;
+			}
+		}
+	}
+	sleep(1);
+	tcflush(serialDevice, TCIOFLUSH);
+	return status;
 }
 void sendOutline(){
 	int byte = columns + 128;
 	unsigned char message = byte & 255;
-	int received = 0;
-	while (1 == 1) {
-		write(serialDevice, &message , 1);
-		sleep(1);
-		received = read(serialDevice, &messageBuffer, 1);
-		if(messageBuffer == 0 || received == -1)
-			continue;
-		else
-			break;
+	if(sendMessage(message) == -1){
+		printf("Failed communication between the NIBO and the PC. Canceling...");
+		return;
 	}
-	tcflush(serialDevice, TCIOFLUSH);
-	sleep(1);
 	byte = rows + 128;
 	message = byte & 255;
-	while (1 == 1) {
-		write(serialDevice, &message , 1);
-		sleep(1);
-		received = read(serialDevice, &messageBuffer, 1);
-		if(messageBuffer == 0 || received == -1)
-			continue;
-		else
-			break;
+	if(sendMessage(message) == -1){
+		printf("Failed communication between the NIBO and the PC. Canceling...");
+		return;
 	}
-	tcflush(serialDevice, TCIOFLUSH);
-	sleep(1);
 	segment *currentPart = head;
 	while(currentPart != NULL){
 		int byte = 128 + 32 * (currentPart->direction & 3) + currentPart->distance;
 		message = byte & 255;
-		while (1 == 1) {
-			write(serialDevice, &message , 1);
-			sleep(1);
-			received = read(serialDevice, &messageBuffer, 1);
-			if(messageBuffer == 0 || received == -1)
-				continue;
-			else
-				break;
+		if(sendMessage(message) == -1){
+			printf("Failed communication between the NIBO and the PC. Canceling...");
+			return;
 		}
-		tcflush(serialDevice, TCIOFLUSH);
-		sleep(1);
 		currentPart = currentPart->nextSegment;
 	}
 }
+
