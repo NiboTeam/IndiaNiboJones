@@ -24,6 +24,8 @@
 #define XBEEID 128
 // Enlarges the outline, for a better presentation
 #define SCALEFACTOR 3
+// Represents the corners of a segment
+#define CORNERRADIUS 2
 
 // Contains the possible directions the NIBO can take (top down perspective)
 typedef enum{
@@ -224,7 +226,7 @@ int main(){
 void createSegment(int distance, int newDirection){
 	setDirection(newDirection);
 	// The SCALEFACTOR enlarges the outline, for a better presentation, while the +2 represent the corners
-	distance = distance * SCALEFACTOR + 2;
+	distance = distance * SCALEFACTOR + CORNERRADIUS;
 	if (head == NULL){
 		head = malloc(sizeof(segment));
 		head->distance = distance;
@@ -397,26 +399,40 @@ void correctOutline(){
 
 	int difColumns = startColumn - endColumn;
 	currentPart = end;
-
+	// Depending on the direction, the positive and negative values must be processed differently
 	while(difColumns != 0){
 		if(difColumns > 0 && currentPart->direction == 1){
+			// Last part ends before start -> simply add the difference
 			currentPart->distance = currentPart->distance + difColumns;
 			difColumns = 0;
 		}else if (difColumns > 0 && currentPart->direction == 3){
 			if(currentPart->distance > difColumns){
+				// Last part ends behind the start, and this part is long enough -> shorten the part
 				currentPart->distance = currentPart->distance - difColumns;
 				difColumns = 0;
 			}else{
-				currentPart->distance = 1 * SCALEFACTOR + 2;
-				difColumns = difColumns - currentPart->distance;
+				// Last part ends behind the start but this part is not long enough -> shorten, if possible
+				if(currentPart->distance < (1 * SCALEFACTOR + CORNERRADIUS)){
+					// Part is to short
+					continue;
+				}
+				// Part can be shortened
+				int tempDistance = currentPart->distance;
+				currentPart->distance = 1 * SCALEFACTOR + CORNERRADIUS;
+				difColumns = difColumns - (tempDistance - currentPart->distance);
 			}
 		}else if(difColumns < 0 && currentPart->direction == 1){
 			if(currentPart->distance > (difColumns*-1)){
 				currentPart->distance = currentPart->distance + difColumns;
 				difColumns = 0;
 			}else{
-				currentPart->distance = 1 * SCALEFACTOR + 2;
-				difColumns = difColumns - currentPart->distance;
+				if(currentPart->distance < (1 * SCALEFACTOR + CORNERRADIUS)){
+					// Part is to short
+					continue;
+				}
+				int tempDistance = currentPart->distance;
+				currentPart->distance = 1 * SCALEFACTOR + CORNERRADIUS;
+				difColumns = difColumns - (tempDistance - currentPart->distance);
 			}
 		}else if(difColumns < 0 && currentPart->direction == 3){
 			currentPart->distance = currentPart->distance + difColumns;
