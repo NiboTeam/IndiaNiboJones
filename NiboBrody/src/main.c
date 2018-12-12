@@ -122,63 +122,6 @@ void sendOutline();
 
 int main(){
 	setvbuf(stdout, NULL, _IONBF, 0);
-	/*
-	int message = 225;
-	unsigned char c = message & 255;
-	parseMessage(c);
-
-	message = 161;
-	c = message & 255;
-	parseMessage(c);
-	parseMessage(c);
-	message = 129;
-	c = message & 255;
-	parseMessage(c);
-	message = 161;
-	c = message & 255;
-	parseMessage(c);
-	message = 129;
-	c = message & 255;
-	parseMessage(c);
-	message = 130;
-	c = message & 255;
-	parseMessage(c);
-	message = 161;
-	c = message & 255;
-	parseMessage(c);
-	message = 163;
-	c = message & 255;
-	parseMessage(c);
-	message = 161;
-	c = message & 255;
-	parseMessage(c);
-	message = 129;
-	c = message & 255;
-	parseMessage(c);
-	message = 161;
-	c = message & 255;
-	parseMessage(c);
-	parseMessage(c);
-	message = 129;
-	c = message & 255;
-	parseMessage(c);
-	message = 161;
-	c = message & 255;
-	parseMessage(c);
-	message = 128;
-	c = message & 255;
-	parseMessage(c);
-	message = 227;
-	c = message & 255;
-	parseMessage(c);
-
-	correctOutline();
-	parseArraySize();
-	fillArray();
-	printOutline();
-
-	//sendOutline();
-	*/
 	if(initializeXBee() == -1){
 		printf("Initializing failed! Closing program...");
 		return -1;
