@@ -19,16 +19,18 @@
 
 #include <nibo/leds.h>
 
-#include <nibo/pwm.h>
-
 #include "batterystatus.h"
 
 #include "showdistance.h"
 
+//if DEBUG is 0 than the Nibo shows the distances visual on the display
+// else if DEBUG is 1 than the Nibo shows the different states on the display
+#define DEBUG 0
+
 int currentState = 0;
 int threshold_slopes = 90;
 int threshold_front = 100;
-int threshold_sides = 50;
+int threshold_sides = 45;
 
 enum STATES {
 	NO_OBSTACLE,
@@ -45,41 +47,43 @@ void writeToDisplay(char *output) {
 	return;
 }
 void turnLeft() {
+	copro_setSpeed(-10, 10);
+	leds_set_status(LEDS_ORANGE, 3);
 	while (1 == 1) {
-		leds_set_status(LEDS_ORANGE, 3);
 		copro_update();
-		copro_setSpeed(-10, 15);
-		if (copro_distance[2] / 256 < 20 && copro_distance[1] / 256 < 50) {
+		if (((copro_distance[2] / 256) < 50) && ((copro_distance[1] / 256) < 30)) {
+			//delay(500);
 			copro_stop();
 			leds_set_status(LEDS_OFF, 3);
-			return;
+			break;
 		}
 	}
 }
 void turnRight() {
+	copro_setSpeed(10, -10);
+	leds_set_status(LEDS_ORANGE, 6);
 	while (1 == 1) {
-		leds_set_status(LEDS_ORANGE, 6);
 		copro_update();
-		copro_setSpeed(15, -10);
-		if (copro_distance[2] / 256 < 20 && copro_distance[3] / 256 < 50) {
+		if (((copro_distance[2] / 256) < 50) && ((copro_distance[3] / 256) < 30)) {
+			//delay(500);
 			copro_stop();
 			leds_set_status(LEDS_OFF, 6);
-			return;
+			break;
 		}
 	}
 }
 
 void hardRight() {
-	leds_set_status(LEDS_ORANGE, 6);
 	copro_stop();
+	leds_set_status(LEDS_ORANGE, 6);
 	copro_setTargetRel(27, -27, 10);
 	delay(2000);
 	leds_set_status(LEDS_OFF, 6);
 	return;
 }
 void hardLeft() {
-	leds_set_status(LEDS_ORANGE, 3);
 	copro_stop();
+	leds_set_status(LEDS_ORANGE, 3);
 	copro_setTargetRel(-27, 27, 10);
 	delay(2000);
 	leds_set_status(LEDS_OFF, 3);
@@ -96,27 +100,34 @@ void checkSides() {
 	return;
 }
 void driveBackwards() {
+	leds_set_status(LEDS_ORANGE, 0);
+	leds_set_status(LEDS_ORANGE, 1);
+	copro_setSpeed(-10, -10);
 	while (1 == 1) {
-		leds_set_status(LEDS_ORANGE, 0);
-		leds_set_status(LEDS_ORANGE, 1);
-		copro_setSpeed(-10, -10);
 		copro_update();
 		if (copro_distance[0] / 256 < 20 && copro_distance[4] / 256 < 20) {
-			delay(1500);
+			delay(500);
+			copro_stop();
+			leds_set_status(LEDS_OFF, 0);
+			leds_set_status(LEDS_OFF, 1);
 			hardRight();
 			return;
 		} else if (copro_distance[0] / 256 < 20) {
-			delay(1500);
+			delay(500);
+			copro_stop();
+			leds_set_status(LEDS_OFF, 0);
+			leds_set_status(LEDS_OFF, 1);
 			hardRight();
 			return;
 		} else if (copro_distance[4] / 256 < 20) {
-			delay(1500);
+			delay(500);
+			copro_stop();
+			leds_set_status(LEDS_OFF, 0);
+			leds_set_status(LEDS_OFF, 1);
 			hardLeft();
 			return;
 		}
-		delay(1000);
-		leds_set_status(LEDS_OFF, 0);
-		leds_set_status(LEDS_OFF, 1);
+		delay(500);
 	}
 }
 
@@ -128,15 +139,12 @@ int main() {
 	display_init();
 	gfx_init();
 	leds_init();
-	pwm_init();
-
-	leds_set_headlights(512);
 
 	copro_ir_startMeasure();
 	// Endlosschleife
 	while (1 == 1) {
-		copro_update();
 		copro_setSpeed(10, 10);
+		copro_update();
 		if (copro_distance[2] / 256 >= threshold_front) {
 			if ((copro_distance[0] / 256 >= threshold_sides
 					&& copro_distance[4] / 256 >= threshold_sides)
@@ -159,42 +167,51 @@ int main() {
 			currentState = NO_OBSTACLE;
 		}
 
-		gfx_fill(0);
-
-		batteryStatus();
-
-		showDistance(copro_distance[0] / 256, copro_distance[1] / 256,
-				copro_distance[2] / 256, copro_distance[3] / 256,
-				copro_distance[4] / 256);
-
+		if (DEBUG == 0) {
+			gfx_fill(0);
+			batteryStatus();
+			showDistance(copro_distance[0] / 256, copro_distance[1] / 256,
+					copro_distance[2] / 256, copro_distance[3] / 256,
+					copro_distance[4] / 256);
+		}
 		switch (currentState) {
 		case NO_OBSTACLE:
-			//writeToDisplay("NO OBSTACLE");
+			if (DEBUG == 1) {
+				writeToDisplay("NO OBSTACLE");
+			}
 			break;
 		case OBSTACLE_FRONT:
 			copro_stop();
-			//writeToDisplay("OBSTACLE: FRONT");
+			if (DEBUG == 1) {
+				writeToDisplay("OBSTACLE: FRONT");
+			}
 			checkSides();
 			break;
 		case OBSTACLE_LEFT:
-			//copro_stop();
-			//writeToDisplay("OBSTACLE: LEFT");
+			if (DEBUG == 1) {
+				writeToDisplay("OBSTACLE: LEFT");
+			}
 			turnRight();
 			break;
 		case OBSTACLE_RIGHT:
-			//copro_stop();
-			//writeToDisplay("OBSTACLE: RIGHT");
+			if (DEBUG == 1) {
+				writeToDisplay("OBSTACLE: RIGHT");
+			}
 			turnLeft();
 			break;
 		case OBSTACLE_SIDES:
-			//writeToDisplay("OBSTACLE: TUNNEL");
+			if (DEBUG == 1) {
+				writeToDisplay("OBSTACLE: TUNNEL");
+			}
 			break;
 		case OBSTACLE_DEADEND:
 			copro_stop();
-			//writeToDisplay("OBSTACLE: DEADEND");
+			if (DEBUG == 1) {
+				writeToDisplay("OBSTACLE: DEADEND");
+			}
 			driveBackwards();
 			break;
 		}
-		delay(1000);
+		delay(500);
 	}
 }

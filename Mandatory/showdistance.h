@@ -1,8 +1,10 @@
 /*
- * showdistance.h
- *
- *  Created on: 13.11.2018
- *      Author: philipmitzlaff
+ ============================================================================
+ Name        : showdistance.h
+ Author      : Philip Mitzlaff
+ Version     : 1.0
+ Description : function that shows the distance visual on the display
+ ============================================================================
  */
 
 #ifndef SRC_SHOWDISTANCE_H_

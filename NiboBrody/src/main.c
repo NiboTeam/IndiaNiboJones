@@ -23,7 +23,7 @@
 // Used to only address the correct devices
 #define XBEEID 128
 // Enlarges the outline, for a better presentation
-#define SCALEFACTOR 3
+#define SCALEFACTOR 1
 // Represents the corners of a segment
 #define CORNERRADIUS 2
 
@@ -126,16 +126,15 @@ int main(){
 		printf("Initializing failed! Closing program...");
 		return -1;
 	}
+	printf("Waiting for segments...");
 	int received = -1;
 	while (1 == 1) {
-		// This sleep is needed for the flush
+		// Operation sleep
 		sleep(0.5);
 		received = read(serialDevice, &messageBuffer, 1);
 		if(messageBuffer == 0 || received == -1){
 			continue;
 		}
-		// Clears input buffer of the xbee modul
-		tcflush(serialDevice, TCIOFLUSH);
 		if(parseMessage(messageBuffer) == 1){
 			// NIBO detected a line on the ground
 			if(isRunning == 1){
@@ -145,25 +144,31 @@ int main(){
 				parseArraySize();
 				fillArray();
 				printOutline();
-			}
-			segment *currentPart = head;
-			segment *temp = NULL;
-			while (currentPart->nextSegment != NULL){
-				temp = currentPart->nextSegment;
-				free(currentPart);
-				currentPart = temp;
-			}
-			head = NULL;
-			end = NULL;
-			isRunning = 0;
 
-			printf("\nSending...");
-			sendOutline();
-			printf("\nFinished");
-		}else{
-			// The NIBO is at the beginning of a new outline, no additional action needed
-			isRunning = 1;
+				//printf("\nSending...");
+				//sendOutline();
+				//printf("\nFinished");
+
+				segment *currentPart = head;
+				segment *temp = NULL;
+				while (currentPart->nextSegment != NULL){
+					temp = currentPart->nextSegment;
+					free(currentPart);
+					currentPart = temp;
+				}
+				free(temp);
+				head = NULL;
+				end = NULL;
+				isRunning = 0;
+			}else{
+				// The NIBO is at the beginning of a new outline, no additional action needed
+				isRunning = 1;
+			}
 		}
+		// ensures that the segments do not get read twice
+		sleep(2);
+		// Clears input buffer of the xbee modul
+		tcflush(serialDevice, TCIOFLUSH);
 	}
 }
 void createSegment(int distance, int newDirection){
@@ -448,6 +453,7 @@ int parseMessage(unsigned char message){
 		// The last five bits contain the length of the segment (max. length of 3.1 meters)
 		int length = value & 31;
 		// The direction has to be set up, before it can be parsed
+
 		if(direction > 0){
 			direction = 1;
 		}else{
@@ -463,6 +469,7 @@ int parseMessage(unsigned char message){
 }
 void sendAcknowledgement(){
 	// Content of the actual message is meaningless, its just used for the acknowledgement
+	printf("\nAcknowledgement send...\n");
 	int byte = 128;
 	unsigned char answer = byte & 255;
 	write(serialDevice, &answer , 1);
