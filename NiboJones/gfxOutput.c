@@ -69,31 +69,34 @@ void printMachineState(int state) {
 
 	switch (state) {
 	case 0:
-		sprintf(output, "RUNNING_FORWARD");
+		sprintf(output, "INITIALIZATION");
 		break;
 	case 1:
-		sprintf(output, "TURNING_LEFT");
+		sprintf(output, "TRACK_CORRECTION");
 		break;
 	case 2:
-		sprintf(output, "TURNING_RIGHT");
+		sprintf(output, "TURNING_INSIDE");
 		break;
 	case 3:
-		sprintf(output, "WAITING");
+		sprintf(output, "TURNING_OUTSIDE");
 		break;
 	case 4:
-		sprintf(output, "RUNNING_BACKWARDS");
+		sprintf(output, "RUNNING_FORWARD");
 		break;
 	case 5:
-		sprintf(output, "HARD_LEFT");
+		sprintf(output, "SENDING_DATA");
 		break;
 	case 6:
-		sprintf(output, "HARD_RIGHT");
+		sprintf(output, "WAITING");
+		break;
+	case 7:
+		sprintf(output, "FINISHING_RUN");
 		break;
 	}
 
 	gfx_print_text(output);
 
-	if (state == 3) {
+	if (state == 6) {
 		gfx_move(0, 30);
 		gfx_print_text("press s3 for start");
 	}else{

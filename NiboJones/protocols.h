@@ -31,6 +31,9 @@ enum measurement {
 	STARTED = 1
 } measure_State;
 
+void setReconizedBlackLine(int reconized);
+int getReconizedBlackLine();
+int getTurnDirection();
 void init_protocol();
 void runForward_protocol();
 void turnInside_protocol();
