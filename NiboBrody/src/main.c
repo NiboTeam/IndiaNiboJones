@@ -1,5 +1,5 @@
 /**
-  * @brief This programm receives single segments from the NIBO and creates an outline with these segments.
+  * @brief This program receives single segments from NIBO and creates an outline of the structure.
   * @author Benedikt Petschelt
   * @date 7.12.2018
   * @version 1.0
@@ -22,7 +22,7 @@
 #define XBEEPATH "/dev/ttyUSB0"
 // Used to only address the correct devices
 #define XBEEID 128
-// Enlarges the outline, for a better presentation
+// Can enlarge the outline, for a better presentation
 #define SCALEFACTOR 1
 // Represents the corners of a segment
 #define CORNERRADIUS 2
@@ -38,7 +38,7 @@ typedef enum{
 typedef struct segment{
 	int distance;
 	DIRECTIONS direction;
-	// Needed to parse the size of the outline and later on to fill it
+	// Needed to analyze the size of the structure and fill it later
 	struct segment *nextSegment;
 	// Needed to correct the length of segments at the end of an outline (rounding errors could lead to startpoint != endpoint)
 	struct segment *previousSegment;
@@ -53,7 +53,7 @@ int rows = 0;
 // These variables contain the startpoint -> needed to correctly fill the array
 int startColumn = 0;
 int startRow = 0;
-// These variables contain the endpoint -> needed to correct possible rounding error
+// These variables contain the endpoint -> needed to correct possible rounding errors
 int endRow = 0;
 int endColumn = 0;
 // Starting direction is upwards -> If a new message is transmitted, the new direction will be set to the right or left side
@@ -76,11 +76,11 @@ int serialDevice;
 **/
 void createSegment(int distance, int newDirection);
 /**
-  * Parses the size of 'output'
+  * Updates the new size of 'output' - called when a new segment is added
 **/
 void parseArraySize();
 /**
-  * Fills the output with white spaces and walls
+  * Fills the output with white spaces and walls - called when the size of 'output' has been updated
 **/
 void fillArray();
 /**
@@ -98,11 +98,13 @@ void setDirection(int newDirection);
 void correctOutline();
 /**
   * Sets up all needed paramters and data structures for the XBee communication
+  * @return Status information as to whether the configuration was positive or negative
 **/
 int initializeXBee();
 /**
   * Parses an incoming message from the NIBO
   * @param message The message in form of a byte
+  * @return Status information whether a black line has been recognized in the segment or not
 **/
 int parseMessage(unsigned char message);
 /**
@@ -111,14 +113,14 @@ int parseMessage(unsigned char message);
 void sendAcknowledgement();
 /**
   * Sends a single byte to the NIBO and awaits an answer
-  * @param The byte which is gonna by transmitted
+  * @param The byte being transmitted
+  * @return Status information whether the PC received an acknowledgement or not
 **/
 int sendMessage(unsigned char byte);
 /**
-  * Sends the outline to the NIBO at the end of the drive
+  * Sends the outline to the NIBO at the end of the drive - currently unused
 **/
 void sendOutline();
-
 
 int main(){
 	setvbuf(stdout, NULL, _IONBF, 0);
@@ -141,10 +143,8 @@ int main(){
 				// The NIBO finished the outline -> free all resources and correct the outline if necessary
 				printf("\n\nCorrecting outline...\n");
 				correctOutline();
-				parseArraySize();
-				fillArray();
-				printOutline();
 
+				// Currently not used
 				//printf("\nSending...");
 				//sendOutline();
 				//printf("\nFinished");
@@ -165,15 +165,16 @@ int main(){
 				isRunning = 1;
 			}
 		}
-		// ensures that the segments do not get read twice
+		// Ensures that the segments do not get read twice
 		sleep(2);
-		// Clears input buffer of the xbee modul
+		// Clears input buffer of the XBee modul
 		tcflush(serialDevice, TCIOFLUSH);
 	}
 }
 void createSegment(int distance, int newDirection){
 	setDirection(newDirection);
-	// The SCALEFACTOR enlarges the outline, for a better presentation, while the +2 represent the corners
+	// The SCALEFACTOR enlarges the outline, for a better presentation
+	// The corners enclose the actual segment (CORNERRADIUS)
 	distance = distance * SCALEFACTOR + CORNERRADIUS;
 	if (head == NULL){
 		head = malloc(sizeof(segment));
@@ -203,7 +204,7 @@ void createSegment(int distance, int newDirection){
 }
 void parseArraySize(){
 	segment *currentSegment = head;
-	// current column and row
+	// Current column and row
 	int positionColumn = 0;
 	int positionRow = 0;
 
@@ -273,24 +274,28 @@ void fillArray(){
 		int i = 0;
 		switch(currentSegment->direction){
 		case 0:
+			// Fill upwards -> minus
 			for(i = pointerRow; i > (pointerRow-currentSegment->distance); i--){
 				output[pointerColumn+(i*columns)] = '#';
 			}
 			pointerRow = i+1;
 			break;
 		case 1:
+			// Fill rightwards -> plus
 			for(i = pointerColumn; i < (pointerColumn+currentSegment->distance); i++){
 				output[i+(pointerRow*columns)] = '#';
 			}
 			pointerColumn = i-1;
 			break;
 		case 2:
+			// Fill downwards -> plus
 			for(i = pointerRow; i < (pointerRow+currentSegment->distance); i++){
 				output[pointerColumn+(i*columns)] = '#';
 			}
 			pointerRow = i-1;
 			break;
 		case 3:
+			// Fill leftwards -> minus
 			for(i = pointerColumn; i > (pointerColumn - currentSegment->distance); i--){
 				output[i+(pointerRow*columns)] = '#';
 			}
@@ -322,7 +327,7 @@ void printOutline(){
 		}
 		printf("\n");
 	}
-	// The output array is recalculated and filled with each new segment -> can be set to free
+	// The output array is recalculated and filled with each new segment -> can be freed at the end
 	free(output);
 }
 void correctOutline(){
@@ -350,16 +355,16 @@ void correctOutline(){
 	// Depending on the direction, the positive and negative values must be processed differently
 	while(difColumns != 0){
 		if(difColumns > 0 && currentPart->direction == 1){
-			// Last part ends before start -> simply add the difference
+			// Last part ends before the start -> simply add the difference
 			currentPart->distance = currentPart->distance + difColumns;
 			difColumns = 0;
 		}else if (difColumns > 0 && currentPart->direction == 3){
 			if(currentPart->distance > difColumns){
-				// Last part ends behind the start, and this part is long enough -> shorten the part
+				// Last part ends behind the start, and it is part long enough -> shorten the part
 				currentPart->distance = currentPart->distance - difColumns;
 				difColumns = 0;
 			}else{
-				// Last part ends behind the start but this part is not long enough -> shorten, if possible
+				// Last part ends behind the start but this it is not long enough -> shorten, if possible
 				if(currentPart->distance < (1 * SCALEFACTOR + CORNERRADIUS)){
 					// Part is to short
 					continue;
@@ -389,8 +394,12 @@ void correctOutline(){
 		currentPart = currentPart->previousSegment;
 	}
 	printf("\nCorrecting finished...\n");
+	parseArraySize();
+	fillArray();
+	printOutline();
 }
 int initializeXBee(){
+	// Setting the serial device to non blocking, otherwise it is not easy to tell when the connection has been terminated
 	serialDevice = open(XBEEPATH, O_RDWR | O_NOCTTY | O_NDELAY);
 	if (serialDevice < 0) {
 		fprintf(stderr, "error, counldn't open file %s\n", XBEEPATH);
@@ -440,10 +449,8 @@ int initializeXBee(){
 int parseMessage(unsigned char message){
 	// Converting the message to an integer value
 	int value = message;
-	/*
-	 * We transmit one byte - The first bit (from the left) indicates which device was addressed
-	 * (1 is for the primary devices - PC and active NIBO, 0 is for the passive NIBO)
-	*/
+	// One byte is transmitted - The first bit (from the left) indicates which device was addressed
+	// (1 is for the communication between the PC and the active NIBO, 0 is for the passive NIBO and the active NIBO)
 	int id = value & (1 << 7);
 	if(id == XBEEID){
 		// The second bit indicates whether a line has been detected on the ground (0 - no, 1 - yes)
@@ -452,8 +459,8 @@ int parseMessage(unsigned char message){
 		int direction = value & (1<<5);
 		// The last five bits contain the length of the segment (max. length of 3.1 meters)
 		int length = value & 31;
-		// The direction has to be set up, before it can be parsed
 
+		// The direction has to be set up, before it can be parsed
 		if(direction > 0){
 			direction = 1;
 		}else{
@@ -468,7 +475,7 @@ int parseMessage(unsigned char message){
 	}
 }
 void sendAcknowledgement(){
-	// Content of the actual message is meaningless, its just used for the acknowledgement
+	// Content of the actual message is meaningless, it just has to address the primary NIBO
 	printf("\nAcknowledgement send...\n");
 	int byte = 128;
 	unsigned char answer = byte & 255;
@@ -484,24 +491,29 @@ int sendMessage(unsigned char byte){
 		received = read(serialDevice, &messageBuffer, 1);
 		if(messageBuffer == 0 || received == -1){
 			if(counter > 10){
+				// The maximum amount of retries has been reached -> failed communication
 				status = -1;
 				break;
 			}
 			counter++;
 			continue;
 		}else{
+			// Receiving buffer is not empty
 			int answer = messageBuffer;
 			if( (answer & 128) == 128){
+				// Acknowledgement has been received
 				status = 1;
 				break;
 			}
 		}
 	}
+	// This sleep is needed for the flush
 	sleep(1);
 	tcflush(serialDevice, TCIOFLUSH);
 	return status;
 }
 void sendOutline(){
+	// Currently unused
 	int byte = columns + 128;
 	unsigned char message = byte & 255;
 	if(sendMessage(message) == -1){
@@ -525,4 +537,3 @@ void sendOutline(){
 		currentPart = currentPart->nextSegment;
 	}
 }
-
