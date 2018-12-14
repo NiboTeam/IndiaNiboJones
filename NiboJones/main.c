@@ -46,11 +46,12 @@ int sendSegment(int recognizedLine, int direction, int leftOdometry, int rightOd
 	unsigned char answer;
 	int finishedSuccessfull = 0;
 	int i = 0;
-	while(1){
-		if(!uart0_txfull()){
-			uart0_putchar(message);
-		}
-		delay(1000);
+	if(!uart0_txfull()){
+		uart0_putchar(message);
+	}
+	finishedSuccessfull = 1;
+	/*while(1){
+		delay(800);
 		// wait for answer
 		if(!uart0_rxempty()){
 			answer = uart0_getchar();
@@ -67,36 +68,8 @@ int sendSegment(int recognizedLine, int direction, int leftOdometry, int rightOd
 			break;
 		}
 		i++;
-	}
+	}*/
 	return finishedSuccessfull;
-}
-
-void sendMessageToNibo(int signal){
-	// signal indicates the start or end of the music
-	// this message addresses the NIBO, so the indication bit has to be 0
-	int byte = signal;
-	unsigned char message = byte & 255;
-	unsigned char answer;
-	int i = 0;
-	while(1){
-		if(!uart0_txfull()){
-			uart0_putchar(message);
-		}
-		delay(200);
-		if (!uart0_rxempty()){
-			// wait for answer
-			answer = uart0_getchar();
-			byte = answer;
-			if((byte & 128) != 0){
-				// wrong indicator
-				continue;
-			}
-			break;
-		}else if (i == 25){
-			break;
-		}
-		i++;
-	}
 }
 
 int sendData(){
@@ -148,13 +121,14 @@ int main() {
 			trackCorrection_protocol();
 			break;
 		case TURNING_INSIDE:
-			leds_set_status(LEDS_OFF, 3);
-			leds_set_status(LEDS_OFF, 7);
+			leds_set_status(LEDS_OFF, 4);
+			leds_set_status(LEDS_OFF, 5);
 			leds_set_status(LEDS_RED, 0);
 			leds_set_status(LEDS_RED, 1);
-			turnInside_protocol();
+			delay(200);
 			leds_set_status(LEDS_OFF, 0);
 			leds_set_status(LEDS_OFF, 1);
+			turnInside_protocol();
 			if(measure_State == STARTED){
 				machine_State = SENDING_DATA;
 			}else{
@@ -162,14 +136,15 @@ int main() {
 			}
 			break;
 		case TURNING_OUTSIDE:
-			leds_set_status(LEDS_OFF, 3);
-			leds_set_status(LEDS_OFF, 7);
+			leds_set_status(LEDS_OFF, 4);
+			leds_set_status(LEDS_OFF, 5);
 			leds_set_status(LEDS_RED, 0);
 			leds_set_status(LEDS_RED, 1);
-			turnOutside_protocol();
-			machine_State = RUNNING_FORWARD;
+			delay(200);
 			leds_set_status(LEDS_OFF, 0);
 			leds_set_status(LEDS_OFF, 1);
+			turnOutside_protocol();
+			machine_State = RUNNING_FORWARD;
 			copro_setSpeed(10, 10);
 			delay(2000);
 			if(measure_State == STARTED){
@@ -189,7 +164,7 @@ int main() {
 			} else {
 				machine_State = FINISHING_RUN;
 				measure_State = FINISHED;
-				printDebug("Something went wrong!");
+				printDebug("Connection to NB failed!");
 			}
 			setReconizedBlackLine(0);
 			break;

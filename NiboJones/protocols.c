@@ -13,21 +13,21 @@
 #include <nibo/copro.h>
 #include <nibo/leds.h>
 #include <nibo/spi.h>
+#include <nibo/delay.h>
 #include "gfxOutput.h"
 #include <nibo/floor.h>
 #include "protocols.h"
 #include <nibo/delay.h>
-#include "nibotopc.h"
-#include "nibotonibo.h"
+#include "uart0.h"
 #include "n2switchS3.h"
 
-#define FRONT_THRESHOLD 100
+//#define FRONT_THRESHOLD 200
 #define SIDE_OUTSIDE_TURN_THRESHOLD 20
-#define SIDE_THRESHOLD_OUTSIDE_MAX 200 //180
+/*#define SIDE_THRESHOLD_OUTSIDE_MAX 200 //180
 #define SIDE_THRESHOLD_OUTSIDE_MIN 190 //150
-#define BLADE_THRESHOLD_OUTSIDE_MAX 80
-#define BLADE_THRESHOLD_OUTSIDE_MIN 20
-#define BLACK_UNDERGROUND 25
+#define BLADE_THRESHOLD_OUTSIDE_MAX 100
+#define BLADE_THRESHOLD_OUTSIDE_MIN 50*/
+#define BLACK_UNDERGROUND 40
 
 enum correctState {
 	OUTSIDE = 0,
@@ -35,6 +35,11 @@ enum correctState {
 	NON
 } correctState;
 
+int FRONT_THRESHOLD = 0;
+int SIDE_THRESHOLD_OUTSIDE_MAX = 0; //180
+int SIDE_THRESHOLD_OUTSIDE_MIN = 0; //150
+int BLADE_THRESHOLD_OUTSIDE_MAX = 0;
+int BLADE_THRESHOLD_OUTSIDE_MIN = 0;
 int lastCorrectState = -1;
 int reconizedBlackLine_send = 0;
 int turnDirection_send = 0;
@@ -54,65 +59,108 @@ int getTurnDirection(){
 	return turnDirection_send;
 }
 
+void sendMessageToNibo(int signal){
+	// signal indicates the start or end of the music
+	// this message addresses the NIBO, so the indication bit has to be 0
+	int byte = signal;
+	unsigned char message = byte & 255;
+	unsigned char answer;
+	int i = 0;
+	while(i == 0){
+		if(!uart0_txfull()){
+			uart0_putchar(message);
+		}
+		/*delay(200);
+		if (!uart0_rxempty()){
+			// wait for answer
+			answer = uart0_getchar();
+			byte = answer;
+			if((byte & 128) != 0){
+				// wrong indicator
+				continue;
+			}
+			break;
+		}else if (i == 25){
+			break;
+		}
+		i++;*/
+	}
+}
+
 void init_protocol(){
 	floor_init();
 	copro_update();
 	printDebug("Initialization...");
 	printMovingDirection(run_direction);
-	int averageDistance_left = 0;
-	int averageDistance_right = 0;
+	int averageDistance_SideLeft = 0;
+	int averageDistance_SideRight = 0;
+	int averageDistance_BladeLeft = 0;
+	int averageDistance_BladeRight= 0;
 
 	for(int i = 0; i < 5; i++){
-		averageDistance_left += copro_distance[4] / 256;
-		averageDistance_right += copro_distance[0] / 256;
+		copro_update();
+		averageDistance_SideLeft += copro_distance[4] / 256;
+		averageDistance_SideRight += copro_distance[0] / 256;
+		averageDistance_BladeLeft += copro_distance[3] / 256;
+		averageDistance_BladeRight += copro_distance[1] / 256;
 		delay(200);
 	}
 
-	averageDistance_left = averageDistance_left / 5;
-	averageDistance_right = averageDistance_right / 5;
+	averageDistance_SideLeft = averageDistance_SideLeft / 5;
+	averageDistance_SideRight = averageDistance_SideRight / 5;
+	averageDistance_BladeLeft = averageDistance_BladeLeft / 5;
+	averageDistance_BladeRight = averageDistance_BladeRight / 5;
 
-	if(averageDistance_left > averageDistance_right){
+	if(averageDistance_SideLeft > averageDistance_SideRight){
 		run_direction = RIGHT_RUN;
+		SIDE_THRESHOLD_OUTSIDE_MAX = averageDistance_SideLeft;
+		SIDE_THRESHOLD_OUTSIDE_MIN = averageDistance_SideLeft - 20;
+		BLADE_THRESHOLD_OUTSIDE_MAX = averageDistance_BladeLeft;
+		BLADE_THRESHOLD_OUTSIDE_MIN = averageDistance_BladeLeft - 20;
 	}else{
 		run_direction = LEFT_RUN;
+		SIDE_THRESHOLD_OUTSIDE_MAX = averageDistance_SideRight + 10;
+		SIDE_THRESHOLD_OUTSIDE_MIN = averageDistance_SideRight - 10;
+		BLADE_THRESHOLD_OUTSIDE_MAX = averageDistance_BladeRight + 10;
+		BLADE_THRESHOLD_OUTSIDE_MIN = averageDistance_BladeRight - 10;
 	}
+
+	FRONT_THRESHOLD = SIDE_THRESHOLD_OUTSIDE_MAX;
+
+	if(SIDE_THRESHOLD_OUTSIDE_MAX > 250){
+		FRONT_THRESHOLD = FRONT_THRESHOLD - 30;
+	}else if(SIDE_THRESHOLD_OUTSIDE_MAX > 230){
+		FRONT_THRESHOLD = FRONT_THRESHOLD - 10;
+	}
+
 	if(run_direction == LEFT_RUN){
 			sensorIDSide = 0;
 			sensorIDBlade = 1;
 	}else{
-			sensorIDSide = 3;
-			sensorIDBlade = 4;
+			sensorIDSide = 4;
+			sensorIDBlade = 3;
 	}
 
 	cleanDebug(17);
-	if(run_direction == LEFT_RUN){
+	/*if(run_direction == LEFT_RUN){
 		printDebug("L");
-	}
-	else{
+	}else{
 		printDebug("R");
-	}
+	}*/
 	delay(500);
 	printMovingDirection(run_direction);
 }
 
 void correctTrackToLeft(){
-	leds_set_status(LEDS_ORANGE, 3);
-	leds_set_status(LEDS_OFF, 6);
+	leds_set_status(LEDS_ORANGE, 4);
+	leds_set_status(LEDS_OFF, 5);
 	copro_setSpeed(10, 12);
-	//delay(200);
-	/*copro_setSpeed(12, 10);
-	delay(200);
-	copro_setSpeed(10, 10);*/
 }
 
 void correctTrackToRight(){
-	leds_set_status(LEDS_ORANGE, 6);
-	leds_set_status(LEDS_OFF, 3);
+	leds_set_status(LEDS_ORANGE, 5);
+	leds_set_status(LEDS_OFF, 4);
 	copro_setSpeed(12, 10);
-	//delay(200);
-	/*copro_setSpeed(10, 12);
-	delay(200);
-	copro_setSpeed(10, 10);*/
 }
 
 void correctTrackToInside(int direction){
@@ -133,13 +181,13 @@ void correctTrackToOutside(int direction){
 
 void leftTurnFree() {
 	turnDirection_send = 0;
-	leds_set_status(LEDS_ORANGE, 2);
+	leds_set_status(LEDS_ORANGE, 3);
 	while (1 == 1) {
 		copro_update();
 		copro_setSpeed(-10, 15);
-		if (copro_distance[2] / 256 < FRONT_THRESHOLD && copro_distance[1] / 256 < 50) {
+		if (copro_distance[2] / 256 < 100 && copro_distance[1] / 256 < 50) {
 			copro_stop();
-			leds_set_status(LEDS_OFF, 2);
+			leds_set_status(LEDS_OFF, 3);
 			return;
 		}
 	}
@@ -147,22 +195,22 @@ void leftTurnFree() {
 
 void leftTurnForced() {
 	turnDirection_send = 0;
-	leds_set_status(LEDS_ORANGE, 2);
+	leds_set_status(LEDS_ORANGE, 3);
 	copro_setTargetRel(-27, 27, 10);
 	delay(2000);
-	leds_set_status(LEDS_OFF, 2);
+	leds_set_status(LEDS_OFF, 3);
 }
 
 void rightTurnFree() {
 	turnDirection_send = 1;
-	leds_set_status(LEDS_ORANGE, 7);
+	leds_set_status(LEDS_ORANGE, 6);
 	while (1 == 1) {
 		copro_update();
 
 		copro_setSpeed(15, -10);
-		if (copro_distance[2] / 256 < FRONT_THRESHOLD && copro_distance[3] / 256 < 50) {
+		if (copro_distance[2] / 256 < 100 && copro_distance[3] / 256 < 50) {
 			copro_stop();
-			leds_set_status(LEDS_OFF, 7);
+			leds_set_status(LEDS_OFF, 6);
 			return;
 		}
 	}
@@ -170,10 +218,10 @@ void rightTurnFree() {
 
 void rightTurnForced() {
 	turnDirection_send = 1;
-	leds_set_status(LEDS_ORANGE, 7);
+	leds_set_status(LEDS_ORANGE, 6);
 	copro_setTargetRel(27, -27, 10);
 	delay(2000);
-	leds_set_status(LEDS_OFF, 7);
+	leds_set_status(LEDS_OFF, 6);
 }
 
 void turnInside_protocol(){
@@ -193,17 +241,8 @@ void turnOutside_protocol(){
 	delay(1000);
 }
 
-void stopCorrection(int lastCorrectState){
-	if(lastCorrectState == INSIDE){
-		correctTrackToOutside(run_direction);
-	}else if(lastCorrectState == OUTSIDE){
-		correctTrackToInside(run_direction);
-	}
-}
-
 void trackCorrection_protocol(){
 	copro_update();
-
 	if(copro_distance[sensorIDSide] / 256 > SIDE_THRESHOLD_OUTSIDE_MAX || copro_distance[sensorIDBlade] / 256 > BLADE_THRESHOLD_OUTSIDE_MAX){
 		correctState = INSIDE;
 		correctTrackToInside(run_direction);
@@ -211,10 +250,9 @@ void trackCorrection_protocol(){
 		correctState = OUTSIDE;
 		correctTrackToOutside(run_direction);
 	}else{
-		stopCorrection(lastCorrectState);
 		correctState = NON;
-		leds_set_status(LEDS_OFF, 3);
-		leds_set_status(LEDS_OFF, 6);
+		leds_set_status(LEDS_OFF, 4);
+		leds_set_status(LEDS_OFF, 5);
 		copro_setSpeed(10, 10);
 	}
 
@@ -242,12 +280,18 @@ int floorCheck(){
 				printDebug("Started!");
 				copro_resetOdometry(0, 0);
 				measure_State = STARTED;
+				copro_stop();
+				sendMessageToNibo(1);
+				//sendMessageToNibo(1);
 				break;
 			case STARTED:
 				cleanDebug("         ");
 				printDebug("Finished!");
 				measure_State = FINISHED;
 				machine_State = SENDING_DATA;
+				copro_stop();
+				sendMessageToNibo(0);
+				//sendMessageToNibo(0);
 				break;
 		}
 		reconizedBlackLine_send = 1;

@@ -10,8 +10,14 @@
 #include <nibo/gfx.h>
 // Wartefunktionen
 #include <nibo/delay.h>
+#include <nibo/copro.h>
+// Kommunikationsfunktionen fuer die SPI Schnittstelle zum Coprozessor
+#include <nibo/spi.h>
 
-char oldDebug[];
+int showDebug = 1;
+int showMachineStages = 1;
+int showMovingDirection = 1;
+int showInfo = 0;
 
 void initDisplay(){
 	display_init();
@@ -19,6 +25,9 @@ void initDisplay(){
 }
 
 void cleanDebug(int length){
+	if(showDebug != 1){
+		return;
+	}
 	gfx_move(0, 55);
 	char whiper[length];
 
@@ -30,21 +39,29 @@ void cleanDebug(int length){
 }
 
 void printDebug(char array[40]){
+	if(showDebug != 1){
+		return;
+	}
 	gfx_move(0, 55);
 	gfx_print_text(array);
 }
 
 void printInfo(char array[40], int height){
+	if(showInfo != 1){
+		return;
+	}
 	gfx_move(0, height);
 	gfx_print_text(array);
 }
 
 void printMovingDirection(int direction){
+	if(showMovingDirection != 1){
+		return;
+	}
 	gfx_move(120, 55);
 	gfx_print_text("  ");
 	gfx_move(120, 55);
 
-	char output[2];
 	switch (direction) {
 	case 0:
 		gfx_print_text("L");
@@ -59,6 +76,9 @@ void printMovingDirection(int direction){
 }
 
 void printMachineState(int state) {
+	if(showMachineStages != 1){
+		return;
+	}
 	char output[20];
 	gfx_move(0, 5);
 	gfx_print_text("Machine state:");
@@ -99,6 +119,7 @@ void printMachineState(int state) {
 	if (state == 6) {
 		gfx_move(0, 30);
 		gfx_print_text("press s3 for start");
+		//cleanDebug(20);
 	}else{
 		gfx_move(0, 30);
 		gfx_print_text("                        ");
