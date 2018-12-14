@@ -1,0 +1,1324 @@
+Archive member included because of file (symbol)
+
+/Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(display.o)
+                              ./src/gfxOutput.o (display_init)
+/Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(delay.o)
+                              ./src/main.o (delay)
+/Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+                              ./src/main.o (spi_init)
+/Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                              ./src/gfxOutput.o (gfx_get_x)
+/Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                              ./src/protocols.o (copro_update)
+/Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+                              ./src/protocols.o (floor_relative)
+/Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(bot.o)
+                              ./src/main.o (bot_init)
+/Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+                              ./src/main.o (leds_init)
+/Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+                              /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o) (pwm_channel_A)
+/Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(adc.o)
+                              /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o) (adc_init)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+                              (vfprintf)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+                              /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o) (__mulsi3)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+                              ./src/main.o (__divmodhi4)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+                              ./src/uart0.o (__udivmodsi4)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o (exit)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+                              ./src/gfxOutput.o (__tablejump2__)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+                              ./src/gfxOutput.o (__do_copy_data)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+                              ./src/gfxOutput.o (__do_clear_bss)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o) (__muluhisi3)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o) (__udivmodhi4)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o) (__umulhisi3)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o) (__ftoa_engine)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o) (strnlen_P)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strcpy.o)
+                              ./src/gfxOutput.o (strcpy)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o) (strnlen)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o) (fputc)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o) (__ultoa_invert)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eerd_block_atmega128.o)
+                              /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o) (__eerd_block_m128)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_block_atmega128.o)
+                              /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o) (__eewr_block_m128)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_byte_atmega128.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_block_atmega128.o) (__eewr_r18_m128)
+
+Allocating common symbols
+Common symbol       size              file
+
+copro_ticks_offset_r
+                    0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_ticks_offset_l
+                    0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_current_l     0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+segmentWidth        0x2               ./src/protocols.o
+gfx_dm              0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+correctState        0x1               ./src/protocols.o
+adc_random_seed     0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(adc.o)
+spi_tx_buf          0x1b              /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+copro_commands      0x15              /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+spi_rx_size         0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+sensorIDBlade       0x2               ./src/protocols.o
+copro_ticks_l       0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+coproTicksLeft      0x2               ./src/main.o
+copro_rc5_cmd       0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+pwm_channel_A       0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+copro_distance      0xa               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+line_cal            0x10              /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+spi_err_cnt         0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+copro_pos_x         0x4               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_pos_ori       0x4               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_speed_r       0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+segmentHeight       0x2               ./src/protocols.o
+floor_relative      0x8               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+pwm_channel_B       0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+pwm_timer_ms        0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+spi_tx_size         0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+gfx_term_row        0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+gfx_proportional    0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+machine_State       0x1               ./src/main.o
+measure_State       0x1               ./src/main.o
+copro_ticks_r       0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+uart0_txbuf_begin   0x1               ./src/uart0.o
+copro_pos_y         0x4               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+bot_supply          0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(bot.o)
+spi_frame_cnt       0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+copro_ir_mode       0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+sensorIDSide        0x2               ./src/protocols.o
+spi_size            0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+copro_rc5_count     0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+display_type        0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(display.o)
+uart0_rxbuf         0x8               ./src/uart0.o
+uart0_txbuf         0x8               ./src/uart0.o
+gfx_x               0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+copro_current_r     0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+coproTicksRight     0x2               ./src/main.o
+copro_buffer        0x1b              /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+spi_rx_buf          0x1b              /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+uart0_rxbuf_begin   0x1               ./src/uart0.o
+gfx_tile            0x8               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+pwm_channel_C       0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+run_direction       0x1               ./src/main.o
+spi_tx_chk          0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+uart0_rxbuf_end     0x1               ./src/uart0.o
+pwm_timer_sub       0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+floor_absolute      0x8               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+pwm_timer_sec       0x4               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+spi_pos             0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+uart0_txbuf_end     0x1               ./src/uart0.o
+gfx_y               0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+copro_target_distance
+                    0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+spi_rx_chk          0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+gfx_term_col        0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+copro_seq           0x1               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_speed_l       0x2               /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800100         0x0000ff00         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+LOAD ./src/gfxOutput.o
+LOAD ./src/main.o
+LOAD ./src/n2switchS3.o
+LOAD ./src/protocols.o
+LOAD ./src/uart0.o
+LOAD /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnds3.a
+LOAD /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a
+START GROUP
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a
+END GROUP
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x3838
+ *(.vectors)
+ .vectors       0x00000000       0x8c /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table.printMachineState
+                0x0000008c       0x10 ./src/gfxOutput.o
+ .progmem.gcc_sw_table.main
+                0x0000009c       0x10 ./src/main.o
+                0x000000ac                . = ALIGN (0x2)
+                0x000000ac                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000ac        0x0 linker stubs
+ *(.trampolines*)
+                0x000000ac                __trampolines_end = .
+ *(.progmem*)
+ .progmem.data  0x000000ac        0x9 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(bot.o)
+                0x000000ac                bot_lib_revision
+                0x000000b0                bot_lib_version
+ .progmem.data  0x000000b5        0x8 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+ .progmem.data  0x000000bd       0xfa /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+                0x000001b8                . = ALIGN (0x2)
+ *fill*         0x000001b7        0x1 
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000001b8                __ctors_start = .
+ *(.ctors)
+                0x000001b8                __ctors_end = .
+                0x000001b8                __dtors_start = .
+ *(.dtors)
+                0x000001b8                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000001b8        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+                0x000001b8                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000001b8        0xc /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000001c4       0x1a /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+                0x000001c4                __do_copy_data
+ .init4         0x000001de       0x10 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+                0x000001de                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000001ee        0x8 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+ *(.init9)
+ *(.text)
+ .text          0x000001f6        0x4 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+                0x000001f6                __vector_20
+                0x000001f6                __vector_28
+                0x000001f6                __vector_1
+                0x000001f6                __vector_32
+                0x000001f6                __vector_34
+                0x000001f6                __vector_24
+                0x000001f6                __vector_12
+                0x000001f6                __bad_interrupt
+                0x000001f6                __vector_6
+                0x000001f6                __vector_31
+                0x000001f6                __vector_3
+                0x000001f6                __vector_23
+                0x000001f6                __vector_30
+                0x000001f6                __vector_25
+                0x000001f6                __vector_11
+                0x000001f6                __vector_13
+                0x000001f6                __vector_7
+                0x000001f6                __vector_27
+                0x000001f6                __vector_5
+                0x000001f6                __vector_33
+                0x000001f6                __vector_4
+                0x000001f6                __vector_9
+                0x000001f6                __vector_2
+                0x000001f6                __vector_21
+                0x000001f6                __vector_15
+                0x000001f6                __vector_29
+                0x000001f6                __vector_8
+                0x000001f6                __vector_26
+                0x000001f6                __vector_10
+                0x000001f6                __vector_16
+                0x000001f6                __vector_22
+ .text          0x000001fa        0x0 ./src/gfxOutput.o
+ .text          0x000001fa        0x0 ./src/main.o
+ .text          0x000001fa        0x0 ./src/n2switchS3.o
+ .text          0x000001fa        0x0 ./src/protocols.o
+ .text          0x000001fa        0x0 ./src/uart0.o
+ .text          0x000001fa        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(display.o)
+ .text          0x000001fa        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(delay.o)
+ .text          0x000001fa        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+ .text          0x000001fa        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+ .text          0x000001fa        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+ .text          0x000001fa        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+ .text          0x000001fa        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(bot.o)
+ .text          0x000001fa        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+ .text          0x000001fa        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+ .text          0x000001fa        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(adc.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strcpy.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eerd_block_atmega128.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_block_atmega128.o)
+ .text          0x000001fa        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_byte_atmega128.o)
+                0x000001fa                . = ALIGN (0x2)
+ *(.text.*)
+ .text.initDisplay
+                0x000001fa        0x8 ./src/gfxOutput.o
+                0x000001fa                initDisplay
+ .text.setStartPointForOutline
+                0x00000202       0x32 ./src/gfxOutput.o
+                0x00000202                setStartPointForOutline
+ .text.showOutline
+                0x00000234       0xe0 ./src/gfxOutput.o
+                0x00000234                showOutline
+ .text.cleanDebug
+                0x00000314       0x7c ./src/gfxOutput.o
+                0x00000314                cleanDebug
+ .text.printDebug
+                0x00000390       0x2e ./src/gfxOutput.o
+                0x00000390                printDebug
+ .text.printInfo
+                0x000003be       0x2a ./src/gfxOutput.o
+                0x000003be                printInfo
+ .text.printMovingDirection
+                0x000003e8       0x60 ./src/gfxOutput.o
+                0x000003e8                printMovingDirection
+ .text.printMachineState
+                0x00000448       0xe4 ./src/gfxOutput.o
+                0x00000448                printMachineState
+ .text.initUART0
+                0x0000052c        0xc ./src/main.o
+                0x0000052c                initUART0
+ .text.gatherCoproData
+                0x00000538       0x22 ./src/main.o
+                0x00000538                gatherCoproData
+ .text.sendSegment
+                0x0000055a       0x44 ./src/main.o
+                0x0000055a                sendSegment
+ .text.sendData
+                0x0000059e       0x52 ./src/main.o
+                0x0000059e                sendData
+ .text.startup.main
+                0x000005f0      0x174 ./src/main.o
+                0x000005f0                main
+ .text.s3_was_pressed
+                0x00000764       0x26 ./src/n2switchS3.o
+                0x00000764                s3_was_pressed
+ .text.s3_is_pressed
+                0x0000078a       0x20 ./src/n2switchS3.o
+                0x0000078a                s3_is_pressed
+ .text.setRecognizedBlackLine
+                0x000007aa        0xa ./src/protocols.o
+                0x000007aa                setRecognizedBlackLine
+ .text.getRecognizedBlackLine
+                0x000007b4        0xa ./src/protocols.o
+                0x000007b4                getRecognizedBlackLine
+ .text.getTurnDirection
+                0x000007be        0xa ./src/protocols.o
+                0x000007be                getTurnDirection
+ .text.setStartValues
+                0x000007c8       0x96 ./src/protocols.o
+                0x000007c8                setStartValues
+ .text.clearBuffer
+                0x0000085e       0x14 ./src/protocols.o
+                0x0000085e                clearBuffer
+ .text.receiveStartValues
+                0x00000872       0x58 ./src/protocols.o
+                0x00000872                receiveStartValues
+ .text.receiveOutline
+                0x000008ca       0x5e ./src/protocols.o
+                0x000008ca                receiveOutline
+ .text.sendMessageToNibo
+                0x00000928       0x4a ./src/protocols.o
+                0x00000928                sendMessageToNibo
+ .text.init_protocol
+                0x00000972      0x1c0 ./src/protocols.o
+                0x00000972                init_protocol
+ .text.correctTrackToLeft
+                0x00000b32       0x1c ./src/protocols.o
+                0x00000b32                correctTrackToLeft
+ .text.correctTrackToRight
+                0x00000b4e       0x1c ./src/protocols.o
+                0x00000b4e                correctTrackToRight
+ .text.correctTrackToInside
+                0x00000b6a       0x12 ./src/protocols.o
+                0x00000b6a                correctTrackToInside
+ .text.correctTrackToOutside
+                0x00000b7c       0x12 ./src/protocols.o
+                0x00000b7c                correctTrackToOutside
+ .text.leftTurnFree
+                0x00000b8e       0x48 ./src/protocols.o
+                0x00000b8e                leftTurnFree
+ .text.leftTurnForced
+                0x00000bd6       0x30 ./src/protocols.o
+                0x00000bd6                leftTurnForced
+ .text.rightTurnFree
+                0x00000c06       0x4c ./src/protocols.o
+                0x00000c06                rightTurnFree
+ .text.rightTurnForced
+                0x00000c52       0x34 ./src/protocols.o
+                0x00000c52                rightTurnForced
+ .text.turnInside_protocol
+                0x00000c86       0x10 ./src/protocols.o
+                0x00000c86                turnInside_protocol
+ .text.turnOutside_protocol
+                0x00000c96       0x1a ./src/protocols.o
+                0x00000c96                turnOutside_protocol
+ .text.trackCorrection_protocol
+                0x00000cb0       0xbe ./src/protocols.o
+                0x00000cb0                trackCorrection_protocol
+ .text.floorCheck
+                0x00000d6e       0x9c ./src/protocols.o
+                0x00000d6e                floorCheck
+ .text.showOutline_protocol
+                0x00000e0a       0xaa ./src/protocols.o
+                0x00000e0a                showOutline_protocol
+ .text.finishRun_protocol
+                0x00000eb4       0x38 ./src/protocols.o
+                0x00000eb4                finishRun_protocol
+ .text.runForward_protocol
+                0x00000eec       0x7c ./src/protocols.o
+                0x00000eec                runForward_protocol
+ .text.uart0_set_baudrate
+                0x00000f68       0x2c ./src/uart0.o
+                0x00000f68                uart0_set_baudrate
+ .text.uart0_getchar
+                0x00000f94       0x30 ./src/uart0.o
+                0x00000f94                uart0_getchar
+ .text.uart0_putchar
+                0x00000fc4       0x38 ./src/uart0.o
+                0x00000fc4                uart0_putchar
+ .text.uart0_enable
+                0x00000ffc        0x6 ./src/uart0.o
+                0x00000ffc                uart0_enable
+ .text.uart0_disable
+                0x00001002        0x4 ./src/uart0.o
+                0x00001002                uart0_disable
+ .text.__vector_18
+                0x00001006       0x62 ./src/uart0.o
+                0x00001006                __vector_18
+ .text.__vector_19
+                0x00001068       0x64 ./src/uart0.o
+                0x00001068                __vector_19
+ .text.display_write
+                0x000010cc       0x86 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(display.o)
+                0x000010cc                display_write
+ .text.display_read
+                0x00001152       0x82 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(display.o)
+                0x00001152                display_read
+ .text.display_wait
+                0x000011d4       0x34 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(display.o)
+                0x000011d4                display_wait
+ .text.display_init
+                0x00001208       0xbc /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(display.o)
+                0x00001208                display_init
+ .text.delay    0x000012c4       0x14 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(delay.o)
+                0x000012c4                delay
+ .text.spi_restart_transmission
+                0x000012d8       0x3a /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+                0x000012d8                spi_restart_transmission
+ .text.spi_init
+                0x00001312       0x10 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+                0x00001312                spi_init
+ .text.__vector_17
+                0x00001322      0x12e /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+                0x00001322                __vector_17
+ .text.gfx_get_x
+                0x00001450        0x6 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001450                gfx_get_x
+ .text.gfx_get_y
+                0x00001456        0x6 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001456                gfx_get_y
+ .text.gfx_draw_mode
+                0x0000145c        0x6 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x0000145c                gfx_draw_mode
+ .text.gfx_char_width
+                0x00001462       0x40 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001462                gfx_char_width
+ .text.gfx_text_width
+                0x000014a2       0x26 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x000014a2                gfx_text_width
+ .text.gfx_text_width_P
+                0x000014c8       0x2e /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x000014c8                gfx_text_width_P
+ .text.gfx_set_proportional
+                0x000014f6        0x6 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x000014f6                gfx_set_proportional
+ .text.gfx_get_proportional
+                0x000014fc        0x6 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x000014fc                gfx_get_proportional
+ .text.gfx_term_goto
+                0x00001502       0x12 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001502                gfx_term_goto
+ .text.gfx_store_disp_tile
+                0x00001514       0xae /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+ .text.gfx_fill
+                0x000015c2       0x74 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x000015c2                gfx_fill
+ .text.gfx_term_clear
+                0x00001636       0x10 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001636                gfx_term_clear
+ .text.gfx_init
+                0x00001646       0x7e /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001646                gfx_init
+ .text.gfx_move
+                0x000016c4       0x6a /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x000016c4                gfx_move
+ .text.gfx_term_scroll
+                0x0000172e       0xe4 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x0000172e                gfx_term_scroll
+ .text.gfx_display_write2
+                0x00001812       0x90 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001812                gfx_display_write2
+ .text.gfx_pixel
+                0x000018a2       0x26 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x000018a2                gfx_pixel
+ .text.gfx_draw_xbm_P
+                0x000018c8      0x1a4 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x000018c8                gfx_draw_xbm_P
+ .text.gfx_draw_xbm
+                0x00001a6c      0x1a4 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001a6c                gfx_draw_xbm
+ .text.gfx_box  0x00001c10       0x9a /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001c10                gfx_box
+ .text.gfx_vline
+                0x00001caa        0xa /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001caa                gfx_vline
+ .text.gfx_hline
+                0x00001cb4       0x30 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001cb4                gfx_hline
+ .text.gfx_lineTo
+                0x00001ce4      0x112 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001ce4                gfx_lineTo
+ .text.gfx_print_char_base
+                0x00001df6       0xe0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001df6                gfx_print_char_base
+ .text.gfx_print_char
+                0x00001ed6       0x48 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001ed6                gfx_print_char
+ .text.gfx_term_print
+                0x00001f1e       0x88 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001f1e                gfx_term_print
+ .text.gfx_print_text_P
+                0x00001fa6       0x22 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001fa6                gfx_print_text_P
+ .text.gfx_print_text
+                0x00001fc8       0x1a /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001fc8                gfx_print_text
+ .text._copro_check_busy
+                0x00001fe2       0x26 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001fe2                _copro_check_busy
+ .text.copro_update
+                0x00002008      0x138 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00002008                copro_update
+ .text.copro_stop
+                0x00002140        0xc /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00002140                copro_stop
+ .text.copro_stopImmediate
+                0x0000214c        0xe /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x0000214c                copro_stopImmediate
+ .text.copro_setPWM
+                0x0000215a       0x1e /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x0000215a                copro_setPWM
+ .text.copro_setSpeed
+                0x00002178       0x1e /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00002178                copro_setSpeed
+ .text.copro_setTargetAbs
+                0x00002196       0x42 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00002196                copro_setTargetAbs
+ .text.copro_setTargetRel
+                0x000021d8       0x26 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x000021d8                copro_setTargetRel
+ .text.copro_setSpeedParameters
+                0x000021fe       0x2e /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x000021fe                copro_setSpeedParameters
+ .text.copro_setPositionParameters
+                0x0000222c        0x4 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x0000222c                copro_setPositionParameters
+ .text.copro_resetOdometry
+                0x00002230       0x54 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00002230                copro_resetOdometry
+ .text.copro_ir_stop
+                0x00002284       0x20 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00002284                copro_ir_stop
+ .text.copro_ir_startMeasure
+                0x000022a4       0x20 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x000022a4                copro_ir_startMeasure
+ .text.copro_transmitRC5
+                0x000022c4       0x2a /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x000022c4                copro_transmitRC5
+ .text.spi_finished_callback
+                0x000022ee       0xac /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x000022ee                spi_finished_callback
+ .text.floor_calibrateUpdate
+                0x0000239a       0xa2 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+ .text.floor_writePersistent
+                0x0000243c       0x12 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+                0x0000243c                floor_writePersistent
+ .text.floor_readPersistent
+                0x0000244e       0x6a /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+                0x0000244e                floor_readPersistent
+ .text.floor_measure
+                0x000024b8       0xcc /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+ .text.floor_measure_diff
+                0x00002584       0xfe /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+ .text.floor_calibrateWhite
+                0x00002682       0xa6 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+                0x00002682                floor_calibrateWhite
+ .text.floor_calibrateBlack
+                0x00002728       0xa6 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+                0x00002728                floor_calibrateBlack
+ .text.floor_update
+                0x000027ce      0x1ee /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+                0x000027ce                floor_update
+ .text.floor_init
+                0x000029bc       0x32 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+                0x000029bc                floor_init
+ .text.bot_update
+                0x000029ee       0x10 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(bot.o)
+                0x000029ee                bot_update
+ .text.bot_init
+                0x000029fe       0x18 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(bot.o)
+                0x000029fe                bot_init
+ .text.leds_init
+                0x00002a16       0x10 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00002a16                leds_init
+ .text.leds_set_status
+                0x00002a26       0x66 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00002a26                leds_set_status
+ .text.leds_set_status_intensity
+                0x00002a8c        0xa /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00002a8c                leds_set_status_intensity
+ .text.leds_get_status_intensity
+                0x00002a96        0xa /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00002a96                leds_get_status_intensity
+ .text.leds_set_headlights
+                0x00002aa0        0xa /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00002aa0                leds_set_headlights
+ .text.leds_get_headlights
+                0x00002aaa        0xa /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00002aaa                leds_get_headlights
+ .text.leds_set_displaylight
+                0x00002ab4        0xa /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00002ab4                leds_set_displaylight
+ .text.leds_get_displaylight
+                0x00002abe        0xa /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00002abe                leds_get_displaylight
+ .text.pwm_init
+                0x00002ac8       0x64 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+                0x00002ac8                pwm_init
+ .text.__vector_14
+                0x00002b2c      0x108 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+                0x00002b2c                __vector_14
+ .text.adc_init
+                0x00002c34       0x26 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(adc.o)
+                0x00002c34                adc_init
+ .text.adc_read
+                0x00002c5a       0x3c /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(adc.o)
+                0x00002c5a                adc_read
+ .text.adc_get_random_seed
+                0x00002c96        0xa /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(adc.o)
+                0x00002c96                adc_get_random_seed
+ .text.avr-libc
+                0x00002ca0      0x748 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+                0x00002ca0                vfprintf
+ .text.libgcc.mul
+                0x000033e8       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+                0x000033e8                __mulsi3
+ .text.libgcc.div
+                0x00003408        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .text.libgcc   0x00003408        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .text.libgcc.prologue
+                0x00003408        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .text.libgcc.builtins
+                0x00003408        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .text.libgcc.fmul
+                0x00003408        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .text.libgcc.fixed
+                0x00003408        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .text.libgcc.mul
+                0x00003408        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.div
+                0x00003408       0x28 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+                0x00003408                __divmodhi4
+                0x00003408                _div
+ .text.libgcc   0x00003430        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x00003430        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x00003430        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x00003430        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x00003430        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x00003430        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.div
+                0x00003430       0x44 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+                0x00003430                __udivmodsi4
+ .text.libgcc   0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc   0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .text.libgcc.div
+                0x00003474        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .text.libgcc   0x00003474        0xc /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+                0x00003474                __tablejump2__
+                0x00003478                __tablejump__
+ .text.libgcc.prologue
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .text.libgcc.builtins
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .text.libgcc.fmul
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .text.libgcc.fixed
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .text.libgcc.mul
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc   0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00003480        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00003480       0x16 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+                0x00003480                __muluhisi3
+ .text.libgcc.div
+                0x00003496        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x00003496        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x00003496        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x00003496        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x00003496        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x00003496        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc.mul
+                0x00003496        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x00003496       0x28 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+                0x00003496                __udivmodhi4
+ .text.libgcc   0x000034be        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x000034be        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x000034be        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x000034be        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x000034be        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x000034be       0x1e /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+                0x000034be                __umulhisi3
+ .text.libgcc.div
+                0x000034dc        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x000034dc        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x000034dc        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x000034dc        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x000034dc        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x000034dc        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.avr-libc
+                0x000034dc      0x1b0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+                0x000034dc                __ftoa_engine
+ .text.avr-libc
+                0x0000368c       0x16 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                0x0000368c                strnlen_P
+ .text.avr-libc
+                0x000036a2        0xe /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strcpy.o)
+                0x000036a2                strcpy
+ .text.avr-libc
+                0x000036b0       0x16 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen.o)
+                0x000036b0                strnlen
+ .text.avr-libc
+                0x000036c6       0x64 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+                0x000036c6                fputc
+ .text.avr-libc
+                0x0000372a       0xbc /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                0x0000372a                __ultoa_invert
+ .text.avr-libc
+                0x000037e6       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eerd_block_atmega128.o)
+                0x000037e6                __eerd_block_m128
+                0x000037ea                __eerd_blraw_m128
+ .text.avr-libc
+                0x00003806       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_block_atmega128.o)
+                0x00003806                __eewr_block_m128
+ .text.avr-libc
+                0x0000381a       0x1a /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_byte_atmega128.o)
+                0x0000381a                __eewr_byte_m128
+                0x0000381c                __eewr_r18_m128
+                0x00003834                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00003834        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+                0x00003834                exit
+                0x00003834                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00003834        0x4 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ *(.fini0)
+                0x00003838                _etext = .
+
+.data           0x00800100      0x39e load address 0x00003838
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+ .data          0x00800100        0x0 ./src/gfxOutput.o
+ .data          0x00800100        0x0 ./src/main.o
+ .data          0x00800100        0x0 ./src/n2switchS3.o
+ .data          0x00800100        0x0 ./src/protocols.o
+ .data          0x00800100        0x0 ./src/uart0.o
+ .data          0x00800100        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(display.o)
+ .data          0x00800100        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(delay.o)
+ .data          0x00800100        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+ .data          0x00800100      0x240 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00800100                fontTiles
+ .data          0x00800340        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+ .data          0x00800340        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+ .data          0x00800340        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(bot.o)
+ .data          0x00800340        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+ .data          0x00800340        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+ .data          0x00800340        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(adc.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strcpy.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eerd_block_atmega128.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_block_atmega128.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_byte_atmega128.o)
+ *(.data*)
+ .data.showMovingDirection
+                0x00800340        0x2 ./src/gfxOutput.o
+                0x00800340                showMovingDirection
+ .data.showMachineStages
+                0x00800342        0x2 ./src/gfxOutput.o
+                0x00800342                showMachineStages
+ .data.showDebug
+                0x00800344        0x2 ./src/gfxOutput.o
+                0x00800344                showDebug
+ .data.lastCorrectState
+                0x00800346        0x2 ./src/protocols.o
+                0x00800346                lastCorrectState
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x00800348       0xb3 ./src/gfxOutput.o
+                                 0xb6 (size before relaxing)
+ .rodata.str1.1
+                0x008003fb       0x35 ./src/main.o
+ .rodata.str1.1
+                0x00800430       0x6d ./src/protocols.o
+                                 0x80 (size before relaxing)
+ *(.gnu.linkonce.d*)
+                0x0080049e                . = ALIGN (0x2)
+ *fill*         0x0080049d        0x1 
+                0x0080049e                _edata = .
+                0x0080049e                PROVIDE (__data_end, .)
+
+.bss            0x0080049e      0x11a
+                0x0080049e                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080049e        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+ .bss           0x0080049e        0x0 ./src/gfxOutput.o
+ .bss           0x0080049e        0x0 ./src/main.o
+ .bss           0x0080049e        0x0 ./src/n2switchS3.o
+ .bss           0x0080049e        0x0 ./src/protocols.o
+ .bss           0x0080049e        0x0 ./src/uart0.o
+ .bss           0x0080049e        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(display.o)
+ .bss           0x0080049e        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(delay.o)
+ .bss           0x0080049e        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+ .bss           0x0080049e        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+ .bss           0x0080049e        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+ .bss           0x0080049e        0x8 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+ .bss           0x008004a6        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(bot.o)
+ .bss           0x008004a6        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(leds.o)
+ .bss           0x008004a6        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+ .bss           0x008004a6        0x0 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(adc.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strcpy.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eerd_block_atmega128.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_block_atmega128.o)
+ .bss           0x008004a6        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(eewr_byte_atmega128.o)
+ *(.bss*)
+ .bss.showInfo  0x008004a6        0x2 ./src/gfxOutput.o
+                0x008004a6                showInfo
+ .bss.counter   0x008004a8        0x2 ./src/protocols.o
+                0x008004a8                counter
+ .bss.turnDirection_send
+                0x008004aa        0x2 ./src/protocols.o
+                0x008004aa                turnDirection_send
+ .bss.reconizedBlackLine_send
+                0x008004ac        0x2 ./src/protocols.o
+                0x008004ac                reconizedBlackLine_send
+ .bss.BLADE_THRESHOLD_OUTSIDE_MIN
+                0x008004ae        0x2 ./src/protocols.o
+                0x008004ae                BLADE_THRESHOLD_OUTSIDE_MIN
+ .bss.BLADE_THRESHOLD_OUTSIDE_MAX
+                0x008004b0        0x2 ./src/protocols.o
+                0x008004b0                BLADE_THRESHOLD_OUTSIDE_MAX
+ .bss.SIDE_THRESHOLD_OUTSIDE_MIN
+                0x008004b2        0x2 ./src/protocols.o
+                0x008004b2                SIDE_THRESHOLD_OUTSIDE_MIN
+ .bss.SIDE_THRESHOLD_OUTSIDE_MAX
+                0x008004b4        0x2 ./src/protocols.o
+                0x008004b4                SIDE_THRESHOLD_OUTSIDE_MAX
+ .bss.FRONT_THRESHOLD
+                0x008004b6        0x2 ./src/protocols.o
+                0x008004b6                FRONT_THRESHOLD
+ *(COMMON)
+ COMMON         0x008004b8        0x7 ./src/main.o
+                0x008004b8                coproTicksLeft
+                0x008004ba                machine_State
+                0x008004bb                measure_State
+                0x008004bc                coproTicksRight
+                0x008004be                run_direction
+ COMMON         0x008004bf        0x9 ./src/protocols.o
+                0x008004bf                segmentWidth
+                0x008004c1                correctState
+                0x008004c2                sensorIDBlade
+                0x008004c4                segmentHeight
+                0x008004c6                sensorIDSide
+ COMMON         0x008004c8       0x14 ./src/uart0.o
+                0x008004c8                uart0_txbuf_begin
+                0x008004c9                uart0_rxbuf
+                0x008004d1                uart0_txbuf
+                0x008004d9                uart0_rxbuf_begin
+                0x008004da                uart0_rxbuf_end
+                0x008004db                uart0_txbuf_end
+ COMMON         0x008004dc        0x1 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(display.o)
+                0x008004dc                display_type
+ COMMON         0x008004dd       0x3e /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(spi.o)
+                0x008004dd                spi_tx_buf
+                0x008004f8                spi_rx_size
+                0x008004f9                spi_err_cnt
+                0x008004fa                spi_tx_size
+                0x008004fb                spi_frame_cnt
+                0x008004fc                spi_size
+                0x008004fd                spi_rx_buf
+                0x00800518                spi_tx_chk
+                0x00800519                spi_pos
+                0x0080051a                spi_rx_chk
+ COMMON         0x0080051b        0xe /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x0080051b                gfx_dm
+                0x0080051c                gfx_term_row
+                0x0080051d                gfx_proportional
+                0x0080051e                gfx_x
+                0x0080051f                gfx_tile
+                0x00800527                gfx_y
+                0x00800528                gfx_term_col
+ COMMON         0x00800529       0x5d /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00800529                copro_ticks_offset_r
+                0x0080052b                copro_ticks_offset_l
+                0x0080052d                copro_current_l
+                0x0080052f                copro_commands
+                0x00800544                copro_ticks_l
+                0x00800546                copro_rc5_cmd
+                0x00800548                copro_distance
+                0x00800552                copro_pos_x
+                0x00800556                copro_pos_ori
+                0x0080055a                copro_speed_r
+                0x0080055c                copro_ticks_r
+                0x0080055e                copro_pos_y
+                0x00800562                copro_ir_mode
+                0x00800563                copro_rc5_count
+                0x00800564                copro_current_r
+                0x00800566                copro_buffer
+                0x00800581                copro_target_distance
+                0x00800583                copro_seq
+                0x00800584                copro_speed_l
+ COMMON         0x00800586       0x20 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(floor.o)
+                0x00800586                line_cal
+                0x00800596                floor_relative
+                0x0080059e                floor_absolute
+ COMMON         0x008005a6        0x2 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(bot.o)
+                0x008005a6                bot_supply
+ COMMON         0x008005a8        0xe /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(pwm.o)
+                0x008005a8                pwm_channel_A
+                0x008005aa                pwm_channel_B
+                0x008005ac                pwm_timer_ms
+                0x008005ae                pwm_channel_C
+                0x008005b0                pwm_timer_sub
+                0x008005b2                pwm_timer_sec
+ COMMON         0x008005b6        0x2 /Users/hendriktanke/Desktop/Ablage/Uni/ESR/nibolib-20110603/lib/libnibo2.a(adc.o)
+                0x008005b6                adc_random_seed
+                0x008005b8                PROVIDE (__bss_end, .)
+                0x00003838                __data_load_start = LOADADDR (.data)
+                0x00003bd6                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008005b8        0x0
+                0x008005b8                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008005b8                PROVIDE (__noinit_end, .)
+                0x008005b8                _end = .
+                0x008005b8                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab           0x00000000     0x2ebc
+ *(.stab)
+ .stab          0x00000000      0xa14 ./src/gfxOutput.o
+ .stab          0x00000a14      0x924 ./src/main.o
+                                0xb10 (size before relaxing)
+ .stab          0x00001338      0x384 ./src/n2switchS3.o
+                                0x558 (size before relaxing)
+ .stab          0x000016bc     0x11b8 ./src/protocols.o
+                               0x1434 (size before relaxing)
+ .stab          0x00002874      0x648 ./src/uart0.o
+                                0x810 (size before relaxing)
+
+.stabstr        0x00000000     0x1dd8
+ *(.stabstr)
+ .stabstr       0x00000000     0x1dd8 ./src/gfxOutput.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x11
+ *(.comment)
+ .comment       0x00000000       0x11 ./src/gfxOutput.o
+                                 0x12 (size before relaxing)
+ .comment       0x00000000       0x12 ./src/main.o
+ .comment       0x00000000       0x12 ./src/n2switchS3.o
+ .comment       0x00000000       0x12 ./src/protocols.o
+ .comment       0x00000000       0x12 ./src/uart0.o
+ .comment       0x00000000       0x12 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+ .comment       0x00000000       0x12 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x140
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .debug_aranges
+                0x00000020       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .debug_aranges
+                0x00000040       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .debug_aranges
+                0x00000060       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .debug_aranges
+                0x00000080       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .debug_aranges
+                0x000000a0       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .debug_aranges
+                0x000000c0       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .debug_aranges
+                0x000000e0       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .debug_aranges
+                0x00000100       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .debug_aranges
+                0x00000120       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000      0x776
+ *(.debug_info)
+ .debug_info    0x00000000       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .debug_info    0x000000bf       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .debug_info    0x0000017e       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .debug_info    0x0000023d       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .debug_info    0x000002fc       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .debug_info    0x000003bb       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .debug_info    0x0000047a       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .debug_info    0x00000539       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .debug_info    0x000005f8       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .debug_info    0x000006b7       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000       0xc8
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .debug_abbrev  0x00000014       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .debug_abbrev  0x00000028       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .debug_abbrev  0x0000003c       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .debug_abbrev  0x00000050       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .debug_abbrev  0x00000064       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .debug_abbrev  0x00000078       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .debug_abbrev  0x0000008c       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .debug_abbrev  0x000000a0       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .debug_abbrev  0x000000b4       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+
+.debug_line     0x00000000      0x3ea
+ *(.debug_line)
+ .debug_line    0x00000000       0x65 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_mulsi3.o)
+ .debug_line    0x00000065       0x69 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .debug_line    0x000000ce       0x78 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .debug_line    0x00000146       0x58 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .debug_line    0x0000019e       0x5c /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump.o)
+ .debug_line    0x000001fa       0x63 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .debug_line    0x0000025d       0x5e /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .debug_line    0x000002bb       0x60 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .debug_line    0x0000031b       0x6a /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .debug_line    0x00000385       0x65 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(NiboJones.elf elf32-avr)
+LOAD linker stubs

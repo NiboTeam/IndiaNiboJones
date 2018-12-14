@@ -1,8 +1,9 @@
-/*
- * mandatoryProtocol.c
- *
- *  Created on: 06.11.2018
- *      Author: hendriktanke
+/**
+ * @file main.c
+ * @author H.Tanke
+ * @version 1.0
+ * @brief This is the main file of program NIBOJones. In this file is the main located.
+ * Its the start point of program NIBOJones
  */
 
 #include <nibo/niboconfig.h>
@@ -26,73 +27,70 @@
 
 int coproTicksLeft;
 int coproTicksRight;
-int send_counter = 0;
 
+/**
+ * The XBee communication has to be initialized before use.
+ */
 void initUART0(){
 	uart0_set_baudrate(9600);
 	uart0_enable();
 }
 
+/**
+ * This will safe data of the co-processor for sending to NIBOBrody.
+ * Those data are ticks of both wheels moved since last reset
+ */
 void gatherCoproData(){
 	coproTicksLeft = copro_ticks_l;
 	coproTicksRight = copro_ticks_r;
 }
 
+/**
+ * Sends a single part of the measured part of structure to NIBOBrody.
+ * @param recognizedLine set this to 1 if a black line was crossed by measuring last part
+ * @param direction direction in which the NIBO turned before measuring this part.
+ * @param leftOdometry ticks of the left wheel gathered since last reset
+ * @param rightOdometry ticks of the left wheel gathered since last reset
+ * @return
+ */
 int sendSegment(int recognizedLine, int direction, int leftOdometry, int rightOdometry){
 	int averageOdometry = ((leftOdometry + rightOdometry) / 27) / 2;
-	// 1 * 2 ^ 7 addresses the PC
+	// 128 is address of NIBOBrody, function to minimize measured length to a more appropriate length for sending.
 	int byte = 128 + (64 * recognizedLine) + (32 * direction) + averageOdometry;
 	unsigned char message = byte & 255;
-	unsigned char answer;
 	int finishedSuccessfull = 0;
-	int i = 0;
 	if(!uart0_txfull()){
 		uart0_putchar(message);
+		delay(200);
+		finishedSuccessfull = 1;
 	}
-	finishedSuccessfull = 1;
-	/*while(1){
-		delay(800);
-		// wait for answer
-		if(!uart0_rxempty()){
-			answer = uart0_getchar();
-			delay(500);
-			int byte = answer;
-			if((byte & 128) != 128){
-				// wrong indicator
-				continue;
-			}
-			finishedSuccessfull = 1;
-			break;
-		}else if (i == 5){
-			finishedSuccessfull = 0;
-			break;
-		}
-		i++;
-	}*/
 	return finishedSuccessfull;
 }
 
+/**
+ * This method capsulates gathering co-processor data and sending to NIBOBrody by using XBee communication.
+ * @return if sending was successful this returns 1.
+ */
 int sendData(){
 	int successful = 0;
 	gatherCoproData();
-	cleanDebug(20);
-	printDebug(send_counter + " start sending.");
-	successful = sendSegment(getReconizedBlackLine(), getTurnDirection(), coproTicksLeft, coproTicksRight);
-	cleanDebug(20);
-	printDebug(send_counter + " finished sending.");
-	send_counter++;
+	successful = sendSegment(getRecognizedBlackLine(), getTurnDirection(), coproTicksLeft, coproTicksRight);
 	copro_resetOdometry(0, 0);
 
 	return successful;
 }
 
+/**
+ * This is the main part of the program NIBOJones. It contains the state machine and controll simple mechanics of the NIBO
+ * like switching on LEDs.
+ * @return
+ */
 int main() {
 	machine_State = WAITING;
 	measure_State = FINISHED;
 	run_direction = UNKNOWN;
 	int isInitialized = 0;
 	int last_machineState = FINISHING_RUN;
-	printDebug("Protocol started!");
 
 	sei();
 	bot_init();
@@ -107,7 +105,7 @@ int main() {
 	copro_ir_startMeasure();
 	floor_init();
 	int sendingResult;
-	// Endlosschleife
+	// machine state holder
 	while (1 == 1) {
 		switch (machine_State) {
 		case INITIALIZATION:
@@ -123,11 +121,6 @@ int main() {
 		case TURNING_INSIDE:
 			leds_set_status(LEDS_OFF, 4);
 			leds_set_status(LEDS_OFF, 5);
-			leds_set_status(LEDS_RED, 0);
-			leds_set_status(LEDS_RED, 1);
-			delay(200);
-			leds_set_status(LEDS_OFF, 0);
-			leds_set_status(LEDS_OFF, 1);
 			turnInside_protocol();
 			if(measure_State == STARTED){
 				machine_State = SENDING_DATA;
@@ -138,11 +131,6 @@ int main() {
 		case TURNING_OUTSIDE:
 			leds_set_status(LEDS_OFF, 4);
 			leds_set_status(LEDS_OFF, 5);
-			leds_set_status(LEDS_RED, 0);
-			leds_set_status(LEDS_RED, 1);
-			delay(200);
-			leds_set_status(LEDS_OFF, 0);
-			leds_set_status(LEDS_OFF, 1);
 			turnOutside_protocol();
 			machine_State = RUNNING_FORWARD;
 			copro_setSpeed(10, 10);
@@ -157,20 +145,30 @@ int main() {
 			sendingResult = sendData();
 			if(sendingResult == 1){
 				if(measure_State == FINISHED){
-					machine_State = FINISHING_RUN; //FINISHING_RUN
+					machine_State = FINISHING_RUN;
 				}else if(sendingResult == 1 && measure_State == STARTED){
 					machine_State = RUNNING_FORWARD;
 				}
 			} else {
-				machine_State = FINISHING_RUN;
+				machine_State = WAITING;
 				measure_State = FINISHED;
-				printDebug("Connection to NB failed!");
+				printDebug("Connection failed.");
+				delay(1000);
+				cleanDebug(20);
+				printDebug("Aborting..");
+				delay(100);
 			}
-			setReconizedBlackLine(0);
+			setRecognizedBlackLine(0);
 			break;
 		case FINISHING_RUN:
 			copro_stop();
 			finishRun_protocol(); //Umriss anzeigen
+			printDebug("Press s3 for continue.");
+			while(1){
+				if (s3_was_pressed()){
+					break;
+				}
+			}
 			machine_State = WAITING;
 			break;
 		case WAITING:
@@ -182,7 +180,6 @@ int main() {
 					machine_State = INITIALIZATION;
 					isInitialized = 1;
 				}
-
 			}
 			break;
 		}
@@ -192,16 +189,6 @@ int main() {
 		}
 
 		last_machineState = machine_State;
-
-		//gfx_fill(0);
-		//copro_stop();
-		//delay(800);
-
-		//copro_stopImmediate();
-		//copro_resetOdometry(0, 0);
-		//copro_setTargetAbs(280, 280, 28);
-		//copro_setTargetRel(-420, -420, 28);
-		//copro_resetOdometry(0, 0);
 	}
 }
 
