@@ -350,8 +350,18 @@ void printOutline(){
   * If necessary, corrects the outline so that the structure is complete
 **/
 void correctOutline(){
+	int segmentCounter = 1;
+	segment *currentPart = head;
+	while (currentPart->nextSegment != NULL){
+		segmentCounter++;
+		currentPart = currentPart->nextSegment;
+	}
+	if(segmentCounter < 4){
+		printf("\nToo few segments to correct!\n");
+		return;
+	}
 	int difRows = startRow - endRow;
-	segment *currentPart = end;
+	currentPart = end;
 	while(difRows != 0){
 		/* If the row is wrong, the segments are shortened or lengthened upwards or downwards */
 		if(difRows < 0 && currentPart->direction == 0 ){
@@ -368,7 +378,6 @@ void correctOutline(){
 		}
 		currentPart = currentPart->previousSegment;
 	}
-
 	int difColumns = startColumn - endColumn;
 	currentPart = end;
 	/* Depending on the direction, the positive and negative values must be processed differently */
