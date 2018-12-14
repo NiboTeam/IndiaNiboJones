@@ -1,8 +1,9 @@
-/*
- * batterystatus.h
- *
- *  Created on: 10.02.2012
- *      Author: philipmitzlaff
+/**
+ * @file batterystatus.h
+ * @brief header file for batterystatus.c
+ * @author Philip Mitzlaff
+ * @date 01.12.2018
+ * @version 1.0
  */
 
 #ifndef BATTERYSTATUS_H_

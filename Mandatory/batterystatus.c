@@ -1,3 +1,11 @@
+/**
+ * @file batterystatus.c
+ * @brief This program shows the battery status of the Nibo with a battery on the Display
+ * @author Philip Mitzlaff
+ * @date 01.12.2018
+ * @version 1.0
+ */
+
 #include <nibo/niboconfig.h>
 #include <nibo/iodefs.h>
 #include <nibo/bot.h>
@@ -12,6 +20,10 @@
 #include "battery_full.xbm"
 #define DEBUG 1
 
+
+/**
+ * get the voltage of the Nibo and show a specific graphic for different voltages
+ */
 void batteryStatus() {
 
 	double volt = 0;
