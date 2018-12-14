@@ -1195,9 +1195,9 @@ END GROUP
  .stab          0x00002874      0x648 ./src/uart0.o
                                 0x810 (size before relaxing)
 
-.stabstr        0x00000000     0x1dd8
+.stabstr        0x00000000     0x1df0
  *(.stabstr)
- .stabstr       0x00000000     0x1dd8 ./src/gfxOutput.o
+ .stabstr       0x00000000     0x1df0 ./src/gfxOutput.o
 
 .stab.excl
  *(.stab.excl)
