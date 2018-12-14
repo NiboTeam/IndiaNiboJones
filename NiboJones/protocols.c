@@ -82,8 +82,8 @@ void sendMessageToNibo(int signal){
 			break;
 		}else if (i == 25){
 			break;
-		}
-		i++;*/
+		}*/
+		i++;
 	}
 }
 
