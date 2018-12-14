@@ -1,0 +1,1119 @@
+Archive member included because of file (symbol)
+
+/Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(display.o)
+                              ./src/mandatory3.o (display_init)
+/Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(delay.o)
+                              ./src/batterystatus.o (delay)
+/Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+                              ./src/mandatory3.o (spi_init)
+/Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                              ./src/showdistance.o (gfx_get_x)
+/Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                              ./src/mandatory3.o (copro_update)
+/Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(bot.o)
+                              ./src/batterystatus.o (bot_update)
+/Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+                              ./src/mandatory3.o (leds_init)
+/Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+                              /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o) (pwm_channel_A)
+/Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(adc.o)
+                              /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(bot.o) (adc_read)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3.o)
+                              ./src/batterystatus.o (__subsf3)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3.o) (__addsf3x)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(cmpsf2.o)
+                              ./src/batterystatus.o (__ltsf2)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixsfsi.o)
+                              ./src/showdistance.o (__fixsfsi)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixsfsi.o) (__fixunssfsi)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(floatsisf.o)
+                              ./src/batterystatus.o (__floatunsisf)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_cmp.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(cmpsf2.o) (__fp_cmp)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_inf.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_inf)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_nan.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_nan)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_pscA.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_pscA)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_pscB.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_pscB)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_round.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3.o) (__fp_round)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_split3.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_split3)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_zero.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_zero)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(gesf2.o)
+                              ./src/batterystatus.o (__gtsf2)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3.o)
+                              ./src/batterystatus.o (__mulsf3)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3.o) (__mulsf3x)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+                              (vfprintf)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+                              /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o) (__divmodhi4)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o (exit)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+                              ./src/batterystatus.o (__do_copy_data)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+                              ./src/mandatory3.o (__do_clear_bss)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o) (__udivmodhi4)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o) (__ftoa_engine)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o) (strnlen_P)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o) (strnlen)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o) (fputc)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(sprintf.o)
+                              ./src/batterystatus.o (sprintf)
+/usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                              /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o) (__ultoa_invert)
+
+Allocating common symbols
+Common symbol       size              file
+
+copro_ticks_offset_r
+                    0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_ticks_offset_l
+                    0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_current_l     0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+gfx_dm              0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+adc_random_seed     0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(adc.o)
+spi_tx_buf          0x1b              /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+copro_commands      0x15              /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+spi_rx_size         0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+copro_ticks_l       0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_rc5_cmd       0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+pwm_channel_A       0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+copro_distance      0xa               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+spi_err_cnt         0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+copro_pos_x         0x4               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_pos_ori       0x4               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_speed_r       0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+pwm_channel_B       0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+pwm_timer_ms        0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+spi_tx_size         0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+gfx_term_row        0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+gfx_proportional    0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+copro_ticks_r       0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_pos_y         0x4               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+bot_supply          0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(bot.o)
+spi_frame_cnt       0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+copro_ir_mode       0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+spi_size            0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+copro_rc5_count     0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+display_type        0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(display.o)
+gfx_x               0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+copro_current_r     0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_buffer        0x1b              /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+spi_rx_buf          0x1b              /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+gfx_tile            0x8               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+pwm_channel_C       0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+spi_tx_chk          0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+pwm_timer_sub       0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+pwm_timer_sec       0x4               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+spi_pos             0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+gfx_y               0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+copro_target_distance
+                    0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+spi_rx_chk          0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+gfx_term_col        0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+copro_seq           0x1               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+copro_speed_l       0x2               /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800100         0x0000ff00         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+LOAD ./src/batterystatus.o
+LOAD ./src/mandatory3.o
+LOAD ./src/n2switchS3.o
+LOAD ./src/showdistance.o
+LOAD /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnds3.a
+LOAD /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a
+LOAD /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libuart-0.a
+START GROUP
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a
+LOAD /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a
+END GROUP
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x2d28
+ *(.vectors)
+ .vectors       0x00000000       0x8c /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x0000008c                . = ALIGN (0x2)
+                0x0000008c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000008c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000008c                __trampolines_end = .
+ *(.progmem*)
+ .progmem.data.battery_full_bits
+                0x0000008c       0x1e ./src/batterystatus.o
+ .progmem.data.battery_empty_3_bits
+                0x000000aa       0x1e ./src/batterystatus.o
+ .progmem.data.battery_empty_2_bits
+                0x000000c8       0x1e ./src/batterystatus.o
+ .progmem.data.battery_empty_1_bits
+                0x000000e6       0x1e ./src/batterystatus.o
+ .progmem.data  0x00000104        0x9 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(bot.o)
+                0x00000104                bot_lib_revision
+                0x00000108                bot_lib_version
+ .progmem.data  0x0000010d        0x8 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+ .progmem.data  0x00000115       0xfa /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+                0x00000210                . = ALIGN (0x2)
+ *fill*         0x0000020f        0x1 
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000210                __ctors_start = .
+ *(.ctors)
+                0x00000210                __ctors_end = .
+                0x00000210                __dtors_start = .
+ *(.dtors)
+                0x00000210                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000210        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+                0x00000210                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000210        0xc /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000021c       0x1a /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+                0x0000021c                __do_copy_data
+ .init4         0x00000236       0x10 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+                0x00000236                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000246        0x8 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+ *(.init9)
+ *(.text)
+ .text          0x0000024e        0x4 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+                0x0000024e                __vector_20
+                0x0000024e                __vector_28
+                0x0000024e                __vector_1
+                0x0000024e                __vector_32
+                0x0000024e                __vector_34
+                0x0000024e                __vector_24
+                0x0000024e                __vector_12
+                0x0000024e                __bad_interrupt
+                0x0000024e                __vector_6
+                0x0000024e                __vector_31
+                0x0000024e                __vector_3
+                0x0000024e                __vector_23
+                0x0000024e                __vector_30
+                0x0000024e                __vector_25
+                0x0000024e                __vector_11
+                0x0000024e                __vector_13
+                0x0000024e                __vector_19
+                0x0000024e                __vector_7
+                0x0000024e                __vector_27
+                0x0000024e                __vector_5
+                0x0000024e                __vector_33
+                0x0000024e                __vector_4
+                0x0000024e                __vector_9
+                0x0000024e                __vector_2
+                0x0000024e                __vector_21
+                0x0000024e                __vector_15
+                0x0000024e                __vector_29
+                0x0000024e                __vector_8
+                0x0000024e                __vector_26
+                0x0000024e                __vector_10
+                0x0000024e                __vector_16
+                0x0000024e                __vector_18
+                0x0000024e                __vector_22
+ .text          0x00000252        0x0 ./src/batterystatus.o
+ .text          0x00000252        0x0 ./src/mandatory3.o
+ .text          0x00000252        0x0 ./src/n2switchS3.o
+ .text          0x00000252        0x0 ./src/showdistance.o
+ .text          0x00000252        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(display.o)
+ .text          0x00000252        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(delay.o)
+ .text          0x00000252        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+ .text          0x00000252        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+ .text          0x00000252        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+ .text          0x00000252        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(bot.o)
+ .text          0x00000252        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+ .text          0x00000252        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+ .text          0x00000252        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(adc.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(cmpsf2.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixsfsi.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(floatsisf.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_cmp.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_inf.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_nan.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_pscA.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_pscB.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_round.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_split3.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_zero.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(gesf2.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(sprintf.o)
+ .text          0x00000252        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                0x00000252                . = ALIGN (0x2)
+ *(.text.*)
+ .text.batteryStatus
+                0x00000252      0x1a8 ./src/batterystatus.o
+                0x00000252                batteryStatus
+ .text.writeToDisplay
+                0x000003fa       0x1e ./src/mandatory3.o
+                0x000003fa                writeToDisplay
+ .text.turnLeft
+                0x00000418       0x40 ./src/mandatory3.o
+                0x00000418                turnLeft
+ .text.turnRight
+                0x00000458       0x40 ./src/mandatory3.o
+                0x00000458                turnRight
+ .text.hardRight
+                0x00000498       0x2c ./src/mandatory3.o
+                0x00000498                hardRight
+ .text.hardLeft
+                0x000004c4       0x2c ./src/mandatory3.o
+                0x000004c4                hardLeft
+ .text.checkSides
+                0x000004f0       0x1e ./src/mandatory3.o
+                0x000004f0                checkSides
+ .text.driveBackwards
+                0x0000050e       0x86 ./src/mandatory3.o
+                0x0000050e                driveBackwards
+ .text.startup.main
+                0x00000594      0x1a2 ./src/mandatory3.o
+                0x00000594                main
+ .text.s3_was_pressed
+                0x00000736       0x26 ./src/n2switchS3.o
+                0x00000736                s3_was_pressed
+ .text.s3_is_pressed
+                0x0000075c       0x20 ./src/n2switchS3.o
+                0x0000075c                s3_is_pressed
+ .text.showDistance
+                0x0000077c      0x1d0 ./src/showdistance.o
+                0x0000077c                showDistance
+ .text.display_write
+                0x0000094c       0x86 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(display.o)
+                0x0000094c                display_write
+ .text.display_read
+                0x000009d2       0x82 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(display.o)
+                0x000009d2                display_read
+ .text.display_wait
+                0x00000a54       0x34 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(display.o)
+                0x00000a54                display_wait
+ .text.display_init
+                0x00000a88       0xbc /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(display.o)
+                0x00000a88                display_init
+ .text.delay    0x00000b44       0x14 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(delay.o)
+                0x00000b44                delay
+ .text.spi_restart_transmission
+                0x00000b58       0x3a /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+                0x00000b58                spi_restart_transmission
+ .text.spi_init
+                0x00000b92       0x10 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+                0x00000b92                spi_init
+ .text.__vector_17
+                0x00000ba2      0x12e /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+                0x00000ba2                __vector_17
+ .text.gfx_get_x
+                0x00000cd0        0x6 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000cd0                gfx_get_x
+ .text.gfx_get_y
+                0x00000cd6        0x6 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000cd6                gfx_get_y
+ .text.gfx_draw_mode
+                0x00000cdc        0x6 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000cdc                gfx_draw_mode
+ .text.gfx_char_width
+                0x00000ce2       0x40 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000ce2                gfx_char_width
+ .text.gfx_text_width
+                0x00000d22       0x26 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000d22                gfx_text_width
+ .text.gfx_text_width_P
+                0x00000d48       0x2e /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000d48                gfx_text_width_P
+ .text.gfx_set_proportional
+                0x00000d76        0x6 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000d76                gfx_set_proportional
+ .text.gfx_get_proportional
+                0x00000d7c        0x6 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000d7c                gfx_get_proportional
+ .text.gfx_term_goto
+                0x00000d82       0x12 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000d82                gfx_term_goto
+ .text.gfx_store_disp_tile
+                0x00000d94       0xae /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+ .text.gfx_fill
+                0x00000e42       0x74 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000e42                gfx_fill
+ .text.gfx_term_clear
+                0x00000eb6       0x10 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000eb6                gfx_term_clear
+ .text.gfx_init
+                0x00000ec6       0x7e /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000ec6                gfx_init
+ .text.gfx_move
+                0x00000f44       0x6a /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000f44                gfx_move
+ .text.gfx_term_scroll
+                0x00000fae       0xe4 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00000fae                gfx_term_scroll
+ .text.gfx_display_write2
+                0x00001092       0x90 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001092                gfx_display_write2
+ .text.gfx_pixel
+                0x00001122       0x26 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001122                gfx_pixel
+ .text.gfx_draw_xbm_P
+                0x00001148      0x1a4 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001148                gfx_draw_xbm_P
+ .text.gfx_draw_xbm
+                0x000012ec      0x1a4 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x000012ec                gfx_draw_xbm
+ .text.gfx_box  0x00001490       0x9a /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001490                gfx_box
+ .text.gfx_vline
+                0x0000152a        0xa /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x0000152a                gfx_vline
+ .text.gfx_hline
+                0x00001534       0x30 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001534                gfx_hline
+ .text.gfx_lineTo
+                0x00001564      0x112 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001564                gfx_lineTo
+ .text.gfx_print_char_base
+                0x00001676       0xe0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001676                gfx_print_char_base
+ .text.gfx_print_char
+                0x00001756       0x48 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001756                gfx_print_char
+ .text.gfx_term_print
+                0x0000179e       0x88 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x0000179e                gfx_term_print
+ .text.gfx_print_text_P
+                0x00001826       0x22 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001826                gfx_print_text_P
+ .text.gfx_print_text
+                0x00001848       0x1a /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00001848                gfx_print_text
+ .text._copro_check_busy
+                0x00001862       0x26 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001862                _copro_check_busy
+ .text.copro_update
+                0x00001888      0x138 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001888                copro_update
+ .text.copro_stop
+                0x000019c0        0xc /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x000019c0                copro_stop
+ .text.copro_stopImmediate
+                0x000019cc        0xe /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x000019cc                copro_stopImmediate
+ .text.copro_setPWM
+                0x000019da       0x1e /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x000019da                copro_setPWM
+ .text.copro_setSpeed
+                0x000019f8       0x1e /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x000019f8                copro_setSpeed
+ .text.copro_setTargetAbs
+                0x00001a16       0x42 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001a16                copro_setTargetAbs
+ .text.copro_setTargetRel
+                0x00001a58       0x26 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001a58                copro_setTargetRel
+ .text.copro_setSpeedParameters
+                0x00001a7e       0x2e /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001a7e                copro_setSpeedParameters
+ .text.copro_setPositionParameters
+                0x00001aac        0x4 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001aac                copro_setPositionParameters
+ .text.copro_resetOdometry
+                0x00001ab0       0x54 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001ab0                copro_resetOdometry
+ .text.copro_ir_stop
+                0x00001b04       0x20 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001b04                copro_ir_stop
+ .text.copro_ir_startMeasure
+                0x00001b24       0x20 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001b24                copro_ir_startMeasure
+ .text.copro_transmitRC5
+                0x00001b44       0x2a /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001b44                copro_transmitRC5
+ .text.spi_finished_callback
+                0x00001b6e       0xac /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x00001b6e                spi_finished_callback
+ .text.bot_update
+                0x00001c1a       0x10 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(bot.o)
+                0x00001c1a                bot_update
+ .text.bot_init
+                0x00001c2a       0x18 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(bot.o)
+                0x00001c2a                bot_init
+ .text.leds_init
+                0x00001c42       0x10 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00001c42                leds_init
+ .text.leds_set_status
+                0x00001c52       0x66 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00001c52                leds_set_status
+ .text.leds_set_status_intensity
+                0x00001cb8        0xa /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00001cb8                leds_set_status_intensity
+ .text.leds_get_status_intensity
+                0x00001cc2        0xa /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00001cc2                leds_get_status_intensity
+ .text.leds_set_headlights
+                0x00001ccc        0xa /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00001ccc                leds_set_headlights
+ .text.leds_get_headlights
+                0x00001cd6        0xa /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00001cd6                leds_get_headlights
+ .text.leds_set_displaylight
+                0x00001ce0        0xa /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00001ce0                leds_set_displaylight
+ .text.leds_get_displaylight
+                0x00001cea        0xa /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+                0x00001cea                leds_get_displaylight
+ .text.pwm_init
+                0x00001cf4       0x64 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+                0x00001cf4                pwm_init
+ .text.__vector_14
+                0x00001d58      0x108 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+                0x00001d58                __vector_14
+ .text.adc_init
+                0x00001e60       0x26 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(adc.o)
+                0x00001e60                adc_init
+ .text.adc_read
+                0x00001e86       0x3c /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(adc.o)
+                0x00001e86                adc_read
+ .text.adc_get_random_seed
+                0x00001ec2        0xa /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(adc.o)
+                0x00001ec2                adc_get_random_seed
+ .text.avr-libc.fplib
+                0x00001ecc        0xa /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3.o)
+                0x00001ecc                __subsf3
+                0x00001ece                __addsf3
+ .text.avr-libc.fplib
+                0x00001ed6       0xc0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o)
+                0x00001ef0                __addsf3x
+ .text.avr-libc.fplib
+                0x00001f96        0x8 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(cmpsf2.o)
+                0x00001f96                __lesf2
+                0x00001f96                __nesf2
+                0x00001f96                __eqsf2
+                0x00001f96                __cmpsf2
+                0x00001f96                __ltsf2
+ .text.avr-libc.fplib
+                0x00001f9e        0xa /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixsfsi.o)
+                0x00001f9e                __fixsfsi
+ .text.avr-libc.fplib
+                0x00001fa8       0x58 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+                0x00001fa8                __fixunssfsi
+ .text.avr-libc.fplib
+                0x00002000       0x7a /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(floatsisf.o)
+                0x00002000                __floatunsisf
+                0x00002004                __floatsisf
+ .text.avr-libc.fplib
+                0x0000207a       0x48 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_cmp.o)
+                0x0000207a                __fp_cmp
+ .text.avr-libc.fplib
+                0x000020c2        0xc /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_inf.o)
+                0x000020c2                __fp_inf
+ .text.avr-libc.fplib
+                0x000020ce        0x6 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_nan.o)
+                0x000020ce                __fp_nan
+ .text.avr-libc.fplib
+                0x000020d4        0xe /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_pscA.o)
+                0x000020d4                __fp_pscA
+ .text.avr-libc.fplib
+                0x000020e2        0xe /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_pscB.o)
+                0x000020e2                __fp_pscB
+ .text.avr-libc.fplib
+                0x000020f0       0x22 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_round.o)
+                0x000020f0                __fp_round
+ .text.avr-libc.fplib
+                0x00002112       0x44 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_split3.o)
+                0x00002112                __fp_split3
+                0x00002122                __fp_splitA
+ .text.avr-libc.fplib
+                0x00002156        0xe /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_zero.o)
+                0x00002156                __fp_zero
+                0x00002158                __fp_szero
+ .text.avr-libc.fplib
+                0x00002164        0x8 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(gesf2.o)
+                0x00002164                __gtsf2
+                0x00002164                __gesf2
+ .text.avr-libc.fplib
+                0x0000216c        0x4 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3.o)
+                0x0000216c                __mulsf3
+ .text.avr-libc.fplib
+                0x00002170       0xc2 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
+                0x00002184                __mulsf3x
+                0x00002188                __mulsf3_pse
+ .text.avr-libc
+                0x00002232      0x748 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+                0x00002232                vfprintf
+ .text.libgcc.mul
+                0x0000297a        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.div
+                0x0000297a       0x28 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+                0x0000297a                __divmodhi4
+                0x0000297a                _div
+ .text.libgcc   0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc   0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc   0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x000029a2        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x000029a2       0x28 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+                0x000029a2                __udivmodhi4
+ .text.libgcc   0x000029ca        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x000029ca        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x000029ca        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x000029ca        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x000029ca        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .text.avr-libc
+                0x000029ca      0x1b0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+                0x000029ca                __ftoa_engine
+ .text.avr-libc
+                0x00002b7a       0x16 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                0x00002b7a                strnlen_P
+ .text.avr-libc
+                0x00002b90       0x16 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen.o)
+                0x00002b90                strnlen
+ .text.avr-libc
+                0x00002ba6       0x64 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+                0x00002ba6                fputc
+ .text.avr-libc
+                0x00002c0a       0x5e /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(sprintf.o)
+                0x00002c0a                sprintf
+ .text.avr-libc
+                0x00002c68       0xbc /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                0x00002c68                __ultoa_invert
+                0x00002d24                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00002d24        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+                0x00002d24                exit
+                0x00002d24                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00002d24        0x4 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ *(.fini0)
+                0x00002d28                _etext = .
+
+.data           0x00800100      0x24c load address 0x00002d28
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+ .data          0x00800100        0x0 ./src/batterystatus.o
+ .data          0x00800100        0x0 ./src/mandatory3.o
+ .data          0x00800100        0x0 ./src/n2switchS3.o
+ .data          0x00800100        0x0 ./src/showdistance.o
+ .data          0x00800100        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(display.o)
+ .data          0x00800100        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(delay.o)
+ .data          0x00800100        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+ .data          0x00800100      0x240 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x00800100                fontTiles
+ .data          0x00800340        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+ .data          0x00800340        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(bot.o)
+ .data          0x00800340        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+ .data          0x00800340        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+ .data          0x00800340        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(adc.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(cmpsf2.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixsfsi.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(floatsisf.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_cmp.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_inf.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_nan.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_pscA.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_pscB.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_round.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_split3.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_zero.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(gesf2.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(sprintf.o)
+ .data          0x00800340        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ *(.data*)
+ .data.threshold_sides
+                0x00800340        0x2 ./src/mandatory3.o
+                0x00800340                threshold_sides
+ .data.threshold_front
+                0x00800342        0x2 ./src/mandatory3.o
+                0x00800342                threshold_front
+ .data.threshold_slopes
+                0x00800344        0x2 ./src/mandatory3.o
+                0x00800344                threshold_slopes
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x00800346        0x6 ./src/batterystatus.o
+ *(.gnu.linkonce.d*)
+                0x0080034c                . = ALIGN (0x2)
+                0x0080034c                _edata = .
+                0x0080034c                PROVIDE (__data_end, .)
+
+.bss            0x0080034c       0xbe
+                0x0080034c                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/crtm128.o
+ .bss           0x0080034c        0x0 ./src/batterystatus.o
+ .bss           0x0080034c        0x0 ./src/mandatory3.o
+ .bss           0x0080034c        0x0 ./src/n2switchS3.o
+ .bss           0x0080034c        0x0 ./src/showdistance.o
+ .bss           0x0080034c        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(display.o)
+ .bss           0x0080034c        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(delay.o)
+ .bss           0x0080034c        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+ .bss           0x0080034c        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+ .bss           0x0080034c        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+ .bss           0x0080034c        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(bot.o)
+ .bss           0x0080034c        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(leds.o)
+ .bss           0x0080034c        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+ .bss           0x0080034c        0x0 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(adc.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(addsf3x.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(cmpsf2.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixsfsi.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(floatsisf.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_cmp.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_inf.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_nan.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_pscA.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_pscB.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_round.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_split3.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(fp_zero.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(gesf2.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ftoa_engine.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(strnlen.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(sprintf.o)
+ .bss           0x0080034c        0x0 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ *(.bss*)
+ .bss.currentState
+                0x0080034c        0x2 ./src/mandatory3.o
+                0x0080034c                currentState
+ *(COMMON)
+ COMMON         0x0080034e        0x1 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(display.o)
+                0x0080034e                display_type
+ COMMON         0x0080034f       0x3e /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(spi.o)
+                0x0080034f                spi_tx_buf
+                0x0080036a                spi_rx_size
+                0x0080036b                spi_err_cnt
+                0x0080036c                spi_tx_size
+                0x0080036d                spi_frame_cnt
+                0x0080036e                spi_size
+                0x0080036f                spi_rx_buf
+                0x0080038a                spi_tx_chk
+                0x0080038b                spi_pos
+                0x0080038c                spi_rx_chk
+ COMMON         0x0080038d        0xe /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(gfx.o)
+                0x0080038d                gfx_dm
+                0x0080038e                gfx_term_row
+                0x0080038f                gfx_proportional
+                0x00800390                gfx_x
+                0x00800391                gfx_tile
+                0x00800399                gfx_y
+                0x0080039a                gfx_term_col
+ COMMON         0x0080039b       0x5d /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(copro.o)
+                0x0080039b                copro_ticks_offset_r
+                0x0080039d                copro_ticks_offset_l
+                0x0080039f                copro_current_l
+                0x008003a1                copro_commands
+                0x008003b6                copro_ticks_l
+                0x008003b8                copro_rc5_cmd
+                0x008003ba                copro_distance
+                0x008003c4                copro_pos_x
+                0x008003c8                copro_pos_ori
+                0x008003cc                copro_speed_r
+                0x008003ce                copro_ticks_r
+                0x008003d0                copro_pos_y
+                0x008003d4                copro_ir_mode
+                0x008003d5                copro_rc5_count
+                0x008003d6                copro_current_r
+                0x008003d8                copro_buffer
+                0x008003f3                copro_target_distance
+                0x008003f5                copro_seq
+                0x008003f6                copro_speed_l
+ COMMON         0x008003f8        0x2 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(bot.o)
+                0x008003f8                bot_supply
+ COMMON         0x008003fa        0xe /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(pwm.o)
+                0x008003fa                pwm_channel_A
+                0x008003fc                pwm_channel_B
+                0x008003fe                pwm_timer_ms
+                0x00800400                pwm_channel_C
+                0x00800402                pwm_timer_sub
+                0x00800404                pwm_timer_sec
+ COMMON         0x00800408        0x2 /Users/philipmitzlaff/Documents/TH_Wildau/5. Semester/Eingebettete Systeme und Robotik 1/nibolib-20110603/lib/libnibo2.a(adc.o)
+                0x00800408                adc_random_seed
+                0x0080040a                PROVIDE (__bss_end, .)
+                0x00002d28                __data_load_start = LOADADDR (.data)
+                0x00002f74                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080040a        0x0
+                0x0080040a                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0080040a                PROVIDE (__noinit_end, .)
+                0x0080040a                _end = .
+                0x0080040a                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab           0x00000000     0x17d0
+ *(.stab)
+ .stab          0x00000000      0x6cc ./src/batterystatus.o
+ .stab          0x000006cc      0x8b8 ./src/mandatory3.o
+                                0xb10 (size before relaxing)
+ .stab          0x00000f84      0x384 ./src/n2switchS3.o
+                                0x558 (size before relaxing)
+ .stab          0x00001308      0x4c8 ./src/showdistance.o
+                                0x720 (size before relaxing)
+
+.stabstr        0x00000000     0x15e1
+ *(.stabstr)
+ .stabstr       0x00000000     0x15e1 ./src/batterystatus.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x11
+ *(.comment)
+ .comment       0x00000000       0x11 ./src/batterystatus.o
+                                 0x12 (size before relaxing)
+ .comment       0x00000000       0x12 ./src/mandatory3.o
+ .comment       0x00000000       0x12 ./src/n2switchS3.o
+ .comment       0x00000000       0x12 ./src/showdistance.o
+ .comment       0x00000000       0x12 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libprintf_flt.a(vfprintf_flt.o)
+ .comment       0x00000000       0x12 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(fputc.o)
+ .comment       0x00000000       0x12 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/../../../../avr/lib/avr51/libc.a(sprintf.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xa0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .debug_aranges
+                0x00000020       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .debug_aranges
+                0x00000040       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .debug_aranges
+                0x00000060       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .debug_aranges
+                0x00000080       0x20 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000      0x3bb
+ *(.debug_info)
+ .debug_info    0x00000000       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .debug_info    0x000000bf       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .debug_info    0x0000017e       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .debug_info    0x0000023d       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .debug_info    0x000002fc       0xbf /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000       0x64
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .debug_abbrev  0x00000014       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .debug_abbrev  0x00000028       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .debug_abbrev  0x0000003c       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .debug_abbrev  0x00000050       0x14 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+
+.debug_line     0x00000000      0x1ec
+ *(.debug_line)
+ .debug_line    0x00000000       0x69 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_divmodhi4.o)
+ .debug_line    0x00000069       0x58 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .debug_line    0x000000c1       0x63 /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .debug_line    0x00000124       0x5e /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .debug_line    0x00000182       0x6a /usr/local/CrossPack-AVR-20131216/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodhi4.o)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(Mandatory.elf elf32-avr)
+LOAD linker stubs
