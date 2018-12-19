@@ -92,12 +92,15 @@ int main() {
 	int isInitialized = 0;
 	int last_machineState = FINISHING_RUN;
 
+	initUART0();
+	printDebug("Init Xbee...");
+	delay(5000);
+	cleanDebug(15);
+
 	sei();
 	bot_init();
 	spi_init();
 	leds_init();
-
-	initUART0();
 
 	display_init();
 	gfx_init();

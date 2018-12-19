@@ -167,11 +167,17 @@ void sendMessageToNibo(int signal) {
 	unsigned char message = byte & 255;
 	unsigned char answer;
 	int i = 0;
-	while (1) {
-		if (!uart0_txfull()) {
-			uart0_putchar(message);
-		}
+	if (!uart0_txfull()) {
+		uart0_putchar(message);
 		delay(200);
+		cleanDebug(15);
+		char output[20];
+		sprintf(output, "Send %i to nibo!", signal);
+		printDebug(output);
+	}
+	/*while (1) {
+
+
 		if (!uart0_rxempty()) {
 			// wait for answer
 			answer = uart0_getchar();
@@ -185,7 +191,7 @@ void sendMessageToNibo(int signal) {
 			break;
 		}
 		i++;
-	}
+	*/
 }
 
 /**
@@ -194,6 +200,7 @@ void sendMessageToNibo(int signal) {
  * part of this protocol too. There are two ways of moving direction, left and right run.
  */
 void init_protocol() {
+	sendMessageToNibo(1);
 	floor_init();
 	copro_update();
 	printDebug("Initialization...");
@@ -436,6 +443,8 @@ int floorCheck() {
 			measure_State = STARTED;
 			copro_stop();
 			sendMessageToNibo(1);
+			//delay(1000);
+			//sendMessageToNibo(1);
 			break;
 		case STARTED:
 			cleanDebug("         ");
@@ -443,6 +452,7 @@ int floorCheck() {
 			measure_State = FINISHED;
 			machine_State = SENDING_DATA;
 			copro_stop();
+			sendMessageToNibo(0);
 			sendMessageToNibo(0);
 			break;
 		}
@@ -540,6 +550,7 @@ void runForward_protocol() {
 
 	//if a black line was recognized this will perform a hard switch of machine state to improve reaction time.
 	if (floorCheck() == 1) {
+		//machine_State = WAITING;
 		return;
 	}
 
